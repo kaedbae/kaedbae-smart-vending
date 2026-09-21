@@ -54,3 +54,35 @@ galleryStage?.addEventListener('mousemove', (event) => {
 galleryStage?.addEventListener('mouseleave', () => {
   if (galleryMain) galleryMain.style.transformOrigin = 'center center';
 });
+
+// V5 carousel controls: move through the gallery without stacking images vertically.
+const galleryPrev = document.querySelector('.gallery-arrow.prev');
+const galleryNext = document.querySelector('.gallery-arrow.next');
+const galleryCount = document.querySelector('.gallery-count');
+const galleryItems = Array.from(document.querySelectorAll('.gallery-thumb'));
+let galleryIndex = Math.max(0, galleryItems.findIndex((item) => item.classList.contains('active')));
+
+function showGalleryImage(index) {
+  if (!galleryMain || !galleryItems.length) return;
+  galleryIndex = (index + galleryItems.length) % galleryItems.length;
+  const item = galleryItems[galleryIndex];
+  galleryItems.forEach((thumb) => thumb.classList.remove('active'));
+  item.classList.add('active');
+  galleryMain.src = item.dataset.image;
+  galleryMain.alt = item.dataset.alt || 'KayBeeVending smart vending machine';
+  galleryMain.style.transformOrigin = 'center center';
+  if (galleryCount) galleryCount.textContent = `${galleryIndex + 1} / ${galleryItems.length}`;
+  item.scrollIntoView({behavior:'smooth', block:'nearest', inline:'nearest'});
+}
+
+galleryItems.forEach((item, index) => item.addEventListener('click', () => {
+  galleryIndex = index;
+  if (galleryCount) galleryCount.textContent = `${galleryIndex + 1} / ${galleryItems.length}`;
+}));
+galleryPrev?.addEventListener('click', (event) => { event.stopPropagation(); showGalleryImage(galleryIndex - 1); });
+galleryNext?.addEventListener('click', (event) => { event.stopPropagation(); showGalleryImage(galleryIndex + 1); });
+document.addEventListener('keydown', (event) => {
+  if (!galleryStage || !galleryStage.matches(':hover')) return;
+  if (event.key === 'ArrowLeft') showGalleryImage(galleryIndex - 1);
+  if (event.key === 'ArrowRight') showGalleryImage(galleryIndex + 1);
+});
