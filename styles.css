@@ -86,3 +86,14 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
     bottom: 14px !important;
   }
 }
+/* REMOVE WHITE GALLERY BACKGROUNDS */
+.gallery-stage,
+.gallery-thumb {
+  background: transparent !important;
+}
+
+@media (max-width: 900px) {
+  .product-showcase .gallery-stage {
+    background: transparent !important;
+  }
+}
