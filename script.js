@@ -27,3 +27,30 @@ Notes:
 ${f.get('message') || 'None'}`);
   window.location.href = `mailto:admin@kaedbaellc.com?subject=${subject}&body=${body}`;
 });
+
+
+// Product gallery: show one photo at a time.
+const galleryMain = document.getElementById('galleryMain');
+const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+galleryThumbs.forEach((thumb) => {
+  thumb.addEventListener('click', () => {
+    if (!galleryMain) return;
+    galleryThumbs.forEach((item) => item.classList.remove('active'));
+    thumb.classList.add('active');
+    galleryMain.src = thumb.dataset.image;
+    galleryMain.alt = thumb.dataset.alt || 'KayBeeVending smart vending machine';
+  });
+});
+
+// Move the zoom focus toward the pointer, similar to a product-image viewer.
+const galleryStage = document.querySelector('.gallery-stage');
+galleryStage?.addEventListener('mousemove', (event) => {
+  if (!galleryMain) return;
+  const rect = galleryStage.getBoundingClientRect();
+  const x = ((event.clientX - rect.left) / rect.width) * 100;
+  const y = ((event.clientY - rect.top) / rect.height) * 100;
+  galleryMain.style.transformOrigin = `${x}% ${y}%`;
+});
+galleryStage?.addEventListener('mouseleave', () => {
+  if (galleryMain) galleryMain.style.transformOrigin = 'center center';
+});
