@@ -1,16 +1,15 @@
-# KaybeeVending Website
+# KayBeeVending Website v2
 
-Static website for KaybeeVending, designed for GitHub Pages.
+Static GitHub Pages website for KayBeeVending.
 
-## Files
-- `index.html` — website content
-- `styles.css` — responsive styling
-- `script.js` — small dynamic helpers
+## Upload to GitHub
+Replace the current repository files with:
+- index.html
+- styles.css
+- script.js
+- the entire `assets` folder
 
-## Publish with GitHub Pages
-Upload these files to the root of your GitHub repository, then open **Settings → Pages**, select **Deploy from a branch**, choose `main` and `/ (root)`, and save.
+GitHub Pages will redeploy automatically after the commit.
 
-## Contact shown on site
-Jad Makarem — Director of Business Development & Partnerships
-+1 (734) 787-3787
-admin@kaedbaellc.com
+## Custom domain
+Do not add a CNAME file until `kaybeevending.com` has been purchased and its DNS is ready. Then add the domain in GitHub: Settings → Pages → Custom domain and configure the registrar DNS records as GitHub specifies.
