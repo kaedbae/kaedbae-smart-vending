@@ -107,3 +107,78 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
   height: 100%;
   object-fit: cover !important;
 }
+/* ===== FINAL IMAGE DISPLAY FIX ===== */
+
+/* Product gallery */
+.gallery-stage {
+  background: transparent !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  box-shadow: none !important;
+}
+
+.gallery-stage img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  background: transparent !important;
+}
+
+.gallery-thumb {
+  background: transparent !important;
+}
+
+.gallery-thumb img {
+  object-fit: cover !important;
+  background: transparent !important;
+}
+
+/* Machine specifications image */
+.machine-image {
+  height: auto !important;
+  background: transparent !important;
+  overflow: hidden;
+}
+
+.machine-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  background: transparent !important;
+}
+
+/* PHONE */
+@media (max-width: 900px) {
+
+  .product-showcase .product-gallery {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .product-showcase .gallery-thumbs {
+    display: none !important;
+  }
+
+  .product-showcase .gallery-stage {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    background: transparent !important;
+    border-radius: 16px !important;
+  }
+
+  .product-showcase .gallery-stage img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    transform: none !important;
+  }
+}
