@@ -1188,3 +1188,21 @@ a[href^="mailto:"],a[href^="tel:"]{
     object-fit:contain!important;
   }
 }
+
+/* SMART COOLER: SMALLER SPEC ARTWORK */
+.machine-image{
+  height:520px!important;
+  padding:36px 48px!important;
+}
+.machine-image img{
+  width:88%!important;
+  height:88%!important;
+  max-width:720px!important;
+  max-height:470px!important;
+  object-fit:contain!important;
+  margin:auto!important;
+}
+@media(max-width:900px){
+ .machine-image{height:auto!important;padding:24px!important}
+ .machine-image img{width:92%!important;height:auto!important;max-width:620px!important;max-height:none!important}
+}
