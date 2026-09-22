@@ -1238,3 +1238,36 @@ a[href^="mailto:"],a[href^="tel:"]{
     margin:auto!important;
   }
 }
+
+
+/* SMART COOLER BLUE FEATURE BANNER */
+.machine-feature-banner{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  padding:0!important;
+  margin:0!important;
+  background:#dff3fb!important;
+  overflow:hidden!important;
+}
+.machine-feature-banner>img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  margin:0 auto!important;
+  transform:none!important;
+  background:#dff3fb!important;
+}
+@media(max-width:900px){
+  .machine-feature-banner{
+    display:block!important;
+    padding:0!important;
+  }
+  .machine-feature-banner>img{
+    width:100%!important;
+    height:auto!important;
+  }
+}
