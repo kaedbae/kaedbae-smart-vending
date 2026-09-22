@@ -1148,3 +1148,43 @@ a[href^="mailto:"],a[href^="tel:"]{
    transform:scale(1.08)!important;
  }
 }
+
+/* SMART COOLER: SHOW COMPLETE SPEC ARTWORK */
+.machine-section{
+  grid-template-columns:1fr 1fr!important;
+  overflow:hidden!important;
+}
+.machine-image{
+  height:620px!important;
+  min-height:0!important;
+  padding:24px!important;
+  background:#050706!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+}
+.machine-image img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
+  background:#050706!important;
+}
+@media(max-width:900px){
+  .machine-section{grid-template-columns:1fr!important}
+  .machine-image{
+    height:auto!important;
+    padding:12px!important;
+  }
+  .machine-image img{
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:contain!important;
+  }
+}
