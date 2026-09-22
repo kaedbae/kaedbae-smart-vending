@@ -1742,3 +1742,12 @@ a[href^="mailto:"],a[href^="tel:"]{
 .product-showcase .gallery-thumb.active{
   box-shadow:0 0 0 1px rgba(255,255,255,.28)!important;
 }
+
+
+/* Mobile: compact benefit cards to reduce vertical scrolling. */
+@media(max-width:560px){
+  .benefits{gap:10px!important;margin-bottom:48px!important}
+  .benefits article{padding:22px 24px!important}
+  .benefits h3{margin:10px 0 6px!important}
+  .benefits p{margin:0!important;line-height:1.55!important}
+}
