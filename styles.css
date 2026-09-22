@@ -1901,3 +1901,56 @@ form{padding:24px!important;gap:14px!important}
   .product-showcase .gallery-stage>img,
   .product-showcase .gallery-stage:hover>img{max-height:58vh!important}
 }
+
+
+/* Unify all step/info cards to the placement-card visual system. */
+.benefits article,
+.placement-steps article,
+.steps div,
+.why-grid article{
+  background:var(--soft)!important;
+  border:1px solid var(--line)!important;
+  border-radius:18px!important;
+  box-shadow:0 8px 24px rgba(35,95,123,.05)!important;
+  padding:24px 28px!important;
+}
+.benefits article>span,
+.placement-steps article>span,
+.steps div>span{
+  font-family:inherit!important;
+  font-size:12px!important;
+  font-weight:900!important;
+  line-height:normal!important;
+  color:var(--blue)!important;
+}
+.benefits h3,
+.placement-steps h3,
+.steps h3,
+.why-grid h3{
+  font-family:inherit!important;
+  font-size:22px!important;
+  font-weight:inherit;
+  line-height:normal;
+  color:inherit;
+  margin-top:0!important;
+  margin-bottom:7px!important;
+}
+.benefits p,
+.placement-steps p,
+.steps p,
+.why-grid p{
+  font-family:inherit!important;
+  color:var(--muted)!important;
+  line-height:1.65!important;
+  margin-bottom:0!important;
+}
+@media(max-width:560px){
+  .benefits article,
+  .placement-steps article,
+  .steps div,
+  .why-grid article{padding:18px 20px!important}
+  .benefits h3,
+  .placement-steps h3,
+  .steps h3,
+  .why-grid h3{font-size:22px!important}
+}
