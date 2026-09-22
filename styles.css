@@ -2313,3 +2313,18 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
     transform:none!important;
   }
 }
+
+
+/* Remove visible image/background seam in the Plus 440 spotlight. */
+.machine-feature-banner,
+.machine-feature-banner .machine-art-scroll{
+  background:#dff3fb!important;
+}
+.machine-feature-banner .machine-art-scroll{
+  isolation:auto!important;
+}
+.machine-feature-banner .machine-art-scroll>img{
+  background:transparent!important;
+  mix-blend-mode:multiply!important;
+  filter:none!important;
+}
