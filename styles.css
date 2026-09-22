@@ -1277,3 +1277,15 @@ a[href^="mailto:"],a[href^="tel:"]{
 .header-phone{font-size:13px;font-weight:800;white-space:nowrap;color:#155f87;border-left:1px solid #d9e3e8;padding-left:18px}
 .header-phone:hover{text-decoration:underline}
 @media(max-width:900px){.header-phone{display:none}}
+
+
+/* CONTACT LINKS: force click/tap access above all CTA layers */
+.cta{position:relative!important;}
+.cta>div{position:relative!important;z-index:10!important;}
+.cta .contact-links{position:relative!important;z-index:100!important;}
+.cta .contact-links a{
+  position:relative!important;
+  z-index:101!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+}
