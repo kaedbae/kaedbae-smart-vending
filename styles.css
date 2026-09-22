@@ -2334,3 +2334,103 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
 .machine-section-heading h2{
   font-family:inherit!important;
 }
+
+
+/* Plus 440 product information — clean extension of the current single-color spotlight. */
+.machine-feature-banner{
+  grid-template-columns:minmax(240px,.55fr) minmax(360px,1fr) minmax(260px,.62fr)!important;
+  height:auto!important;
+  min-height:620px!important;
+}
+.machine-details{
+  position:relative!important;
+  z-index:3!important;
+  color:#17384b!important;
+  align-self:center!important;
+}
+.machine-model{
+  margin:0 0 3px!important;
+  color:#2a718f!important;
+  font-size:13px!important;
+  font-weight:900!important;
+  letter-spacing:1.6px!important;
+  text-transform:uppercase!important;
+}
+.machine-details h3{
+  margin:0 0 22px!important;
+  font:inherit!important;
+  font-size:28px!important;
+  font-weight:850!important;
+  line-height:1.1!important;
+  color:#17384b!important;
+}
+.machine-stats{
+  display:flex!important;
+  gap:10px!important;
+  flex-wrap:wrap!important;
+  margin-bottom:22px!important;
+}
+.machine-stats span{
+  display:flex!important;
+  flex-direction:column!important;
+  padding:11px 14px!important;
+  border:1px solid rgba(23,56,75,.18)!important;
+  border-radius:12px!important;
+  background:rgba(255,255,255,.22)!important;
+  font-size:12px!important;
+}
+.machine-stats strong{font-size:20px!important;line-height:1.1!important}
+.machine-specs{margin:0 0 20px!important}
+.machine-specs div{
+  display:flex!important;
+  justify-content:space-between!important;
+  gap:18px!important;
+  padding:9px 0!important;
+  border-bottom:1px solid rgba(23,56,75,.16)!important;
+  font-size:12px!important;
+}
+.machine-specs dt{font-weight:700!important}
+.machine-specs dd{margin:0!important;text-align:right!important}
+.machine-categories{display:flex!important;gap:7px!important;flex-wrap:wrap!important}
+.machine-categories span{
+  padding:7px 10px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.28)!important;
+  border:1px solid rgba(23,56,75,.14)!important;
+  font-size:11px!important;
+  font-weight:800!important;
+}
+.machine-dimensions{position:absolute!important;inset:0!important;pointer-events:none!important;color:#17384b!important;font-size:11px!important;font-weight:800!important}
+.machine-dimensions span{position:absolute!important;background:#dff3fb!important;padding:3px 6px!important;border-radius:5px!important}
+.machine-dimensions span:after{content:""!important;position:absolute!important;background:#2a718f!important;opacity:.65!important}
+.dim-height{left:3%!important;top:42%!important;transform:rotate(-90deg)!important}
+.dim-height:after{width:80px!important;height:1px!important;left:100%!important;top:50%!important}
+.dim-width{left:31%!important;bottom:3%!important}
+.dim-width:after{width:70px!important;height:1px!important;right:100%!important;top:50%!important}
+.dim-depth{right:9%!important;bottom:12%!important}
+.dim-depth:after{width:55px!important;height:1px!important;right:100%!important;top:50%!important}
+
+@media(max-width:900px){
+  .machine-feature-banner{
+    grid-template-columns:1fr 1fr!important;
+    grid-template-rows:auto minmax(360px,1fr) auto!important;
+    min-height:0!important;
+    height:auto!important;
+  }
+  .machine-section-heading{grid-column:1 / -1!important}
+  .machine-details{padding:8px 0 18px!important}
+}
+@media(max-width:700px){
+  .machine-feature-banner{
+    grid-template-columns:1fr!important;
+    grid-template-rows:auto minmax(330px,48vh) auto!important;
+    height:auto!important;
+    min-height:0!important;
+    padding-bottom:28px!important;
+  }
+  .machine-section-heading,.machine-art-scroll,.machine-details{grid-column:1!important}
+  .machine-details{padding:4px 4px 0!important}
+  .machine-details h3{font-size:24px!important;margin-bottom:16px!important}
+  .machine-stats{margin-bottom:16px!important}
+  .machine-specs{margin-bottom:16px!important}
+}
