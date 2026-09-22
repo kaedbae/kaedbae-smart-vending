@@ -1271,3 +1271,9 @@ a[href^="mailto:"],a[href^="tel:"]{
     height:auto!important;
   }
 }
+
+
+/* HEADER PHONE CTA */
+.header-phone{font-size:13px;font-weight:800;white-space:nowrap;color:#155f87;border-left:1px solid #d9e3e8;padding-left:18px}
+.header-phone:hover{text-decoration:underline}
+@media(max-width:900px){.header-phone{display:none}}
