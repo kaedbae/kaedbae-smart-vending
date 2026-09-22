@@ -861,6 +861,16 @@ a[href^="mailto:"],a[href^="tel:"]{
   flex:0 0 18px;
   fill:currentColor;
 }
+.contact-links a,
+.footer-contact a{
+  gap:9px;
+}
+.contact-icon{
+  width:19px;
+  height:19px;
+  flex:0 0 19px;
+  fill:currentColor;
+}
 @media(max-width:560px){
   .contact-bar-inner{
     min-height:40px;
