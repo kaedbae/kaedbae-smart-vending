@@ -2844,3 +2844,69 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   .combined-why .why-heading>h2{margin-bottom:22px!important}
   .combined-spaces{padding-top:18px!important}
 }
+
+
+/* Payment reassurance between checkout flow and product gallery. */
+.safe-checkout{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:10px 24px 52px;
+  text-align:center;
+}
+.safe-checkout-rule{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.safe-checkout-rule::before,
+.safe-checkout-rule::after{
+  content:"";
+  height:1px;
+  background:var(--line);
+  flex:1;
+}
+.safe-checkout h2{
+  margin:0;
+  font-family:inherit;
+  font-size:clamp(24px,2.7vw,36px);
+  line-height:1.1;
+  color:var(--ink);
+  white-space:nowrap;
+}
+.payment-methods{
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:34px;
+  flex-wrap:wrap;
+}
+.payment-brand{
+  width:96px;
+  height:58px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial,sans-serif;
+  font-weight:800;
+  line-height:1;
+}
+.payment-brand.visa{background:#1554a5;color:#fff;font-size:29px;font-style:italic}
+.payment-brand.mastercard{background:#f5f5f5;color:#222;position:relative;flex-direction:column;font-size:9px}
+.payment-brand.mastercard::before,
+.payment-brand.mastercard::after{content:"";position:absolute;top:10px;width:30px;height:30px;border-radius:50%}
+.payment-brand.mastercard::before{left:25px;background:#eb001b}
+.payment-brand.mastercard::after{right:25px;background:#f79e1b;opacity:.92}
+.payment-brand.mastercard b{position:absolute;bottom:5px;font-size:8px;font-weight:500}
+.payment-brand.mastercard i{display:none}
+.payment-brand.amex{background:#2768c9;color:#fff;font-size:14px;line-height:.9}
+.payment-brand.discover{background:#4b4b4b;color:#fff;font-size:15px}
+.payment-brand.paypal{background:#f5f5f5;color:#0877c9;font-size:21px;font-style:italic}
+@media(max-width:560px){
+  .safe-checkout{padding:6px 20px 38px}
+  .safe-checkout-rule{gap:10px}
+  .safe-checkout h2{font-size:22px;white-space:normal}
+  .payment-methods{margin-top:22px;gap:10px}
+  .payment-brand{width:82px;height:50px}
+}
