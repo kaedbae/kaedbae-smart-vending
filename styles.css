@@ -871,6 +871,54 @@ a[href^="mailto:"],a[href^="tel:"]{
   flex:0 0 19px;
   fill:currentColor;
 }
+
+/* The specification artwork is wide and information-dense. Keep the desktop
+   presentation unchanged, but enlarge it on phones so its text is readable. */
+.machine-art-scroll{
+  width:100%;
+}
+.machine-art-scroll>img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.machine-swipe-hint{
+  display:none;
+}
+@media(max-width:600px){
+  .machine-feature-banner{
+    display:block!important;
+    padding:0!important;
+    overflow:hidden!important;
+    background:#dff3fb!important;
+  }
+  .machine-swipe-hint{
+    display:block;
+    margin:0;
+    padding:12px 16px;
+    color:#17384b;
+    background:#dff3fb;
+    font-size:14px;
+    font-weight:800;
+    text-align:center;
+  }
+  .machine-art-scroll{
+    width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+  }
+  .machine-art-scroll::-webkit-scrollbar{
+    display:none;
+  }
+  .machine-art-scroll>img{
+    width:780px!important;
+    max-width:none!important;
+    height:auto!important;
+  }
+}
 @media(max-width:560px){
   .contact-bar-inner{
     min-height:40px;
