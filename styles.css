@@ -3381,3 +3381,30 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
     transform:none!important;
   }
 }
+
+
+/* Phone integration: present the complete Plus 440 artwork as a contained site card. */
+@media(max-width:700px){
+  #machine.machine-integrated{
+    box-sizing:border-box!important;
+    width:calc(100% - 24px)!important;
+    max-width:520px!important;
+    margin:20px auto!important;
+    padding:10px!important;
+    background:#dff3fb!important;
+    border-radius:18px!important;
+    overflow:hidden!important;
+  }
+  #machine .machine-integrated-art{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    margin:0 auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    transform:none!important;
+    border-radius:12px!important;
+  }
+}
