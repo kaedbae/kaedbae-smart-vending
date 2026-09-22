@@ -1103,3 +1103,48 @@ a[href^="mailto:"],a[href^="tel:"]{
     transform:scale(1.08)!important;
   }
 }
+
+/* SIX THUMBNAILS: GUARANTEED ONE-SCREEN DESKTOP COLUMN */
+@media(min-width:901px){
+ .product-showcase .product-gallery{
+   grid-template-columns:96px minmax(0,1fr)!important;
+   gap:16px!important;
+   max-width:860px!important;
+ }
+ .product-showcase .gallery-thumbs{
+   display:flex!important;
+   flex-direction:column!important;
+   justify-content:space-between!important;
+   gap:0!important;
+   height:440px!important;
+   max-height:440px!important;
+   overflow:hidden!important;
+ }
+ .product-showcase .gallery-thumb{
+   flex:0 0 66px!important;
+   width:96px!important;
+   height:66px!important;
+   min-height:66px!important;
+   padding:0!important;
+ }
+ .product-showcase .gallery-thumb img{
+   width:100%!important;
+   height:100%!important;
+   object-fit:contain!important;
+ }
+ .product-showcase .gallery-stage{
+   height:440px!important;
+   max-height:440px!important;
+   max-width:748px!important;
+ }
+ .product-showcase .gallery-stage>img{
+   width:100%!important;
+   height:100%!important;
+   max-height:440px!important;
+   object-fit:contain!important;
+   transition:transform .3s ease!important;
+ }
+ .product-showcase .gallery-stage:hover>img{
+   transform:scale(1.08)!important;
+ }
+}
