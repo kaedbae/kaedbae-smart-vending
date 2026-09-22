@@ -552,3 +552,43 @@ a[href^="mailto:"],a[href^="tel:"]{
   position:relative !important;
   z-index:50 !important;
 }
+
+/* SMART COOLER POLISH — keep the full specification artwork visible */
+.machine-section{
+  grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr) !important;
+}
+.machine-copy{
+  padding:72px clamp(32px,5vw,88px) !important;
+}
+.machine-image{
+  height:auto !important;
+  min-height:680px;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:28px 36px !important;
+  background:#050706 !important;
+  overflow:hidden !important;
+}
+.machine-image img{
+  width:100% !important;
+  height:100% !important;
+  max-height:780px !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  transform:none !important;
+}
+@media(max-width:900px){
+  .machine-section{grid-template-columns:1fr !important}
+  .machine-copy{padding:58px 24px !important}
+  .machine-image{
+    min-height:0 !important;
+    padding:16px !important;
+  }
+  .machine-image img{
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+  }
+}
