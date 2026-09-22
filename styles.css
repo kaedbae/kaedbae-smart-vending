@@ -450,3 +450,24 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
   line-height: 1.75;
 }
 .privacy-content a { color: #2b789c; font-weight: 700; }
+
+/* FINAL PROFESSIONAL PASS */
+.nav{position:sticky;top:0;max-width:none;padding-left:max(24px,calc((100vw - var(--max))/2));padding-right:max(24px,calc((100vw - var(--max))/2));height:72px;border-bottom:1px solid rgba(38,55,70,.08);box-shadow:0 4px 18px rgba(35,95,123,.05)}
+.nav .brand-logo{width:52px;height:43px}
+.hero{min-height:620px}
+.hero-copy{padding-top:85px}
+.benefits article{border:1px solid var(--line);box-shadow:0 8px 24px rgba(35,95,123,.05)}
+.placement-process{padding:100px max(24px,calc((100vw - var(--max))/2));background:#fff}
+.placement-heading{max-width:760px;margin-bottom:46px}
+.placement-heading h2{font-size:clamp(38px,4.6vw,58px);line-height:1.04;letter-spacing:-1.5px;margin:0 0 18px;font-weight:900}
+.placement-heading>p:last-child{font-size:18px;line-height:1.7;color:var(--muted)}
+.placement-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.placement-steps article{padding:32px;border:1px solid var(--line);border-radius:18px;background:var(--soft)}
+.placement-steps span{font-size:12px;font-weight:900;color:var(--blue)}
+.placement-steps h3{font-size:22px;margin:18px 0 9px}
+.placement-steps p{margin:0;color:var(--muted);line-height:1.65}
+.footer-logo{display:flex;align-items:center;gap:12px;width:max-content}
+.footer-logo img{width:52px;height:44px;object-fit:contain;background:#fff;border-radius:8px;padding:3px}
+.footer-logo strong{font-size:24px}
+.site-footer{gap:20px}
+@media(max-width:900px){.nav{height:68px}.placement-process{padding:70px 24px}.placement-steps{grid-template-columns:1fr}}
