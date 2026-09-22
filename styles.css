@@ -1954,3 +1954,26 @@ form{padding:24px!important;gap:14px!important}
   .steps h3,
   .why-grid h3{font-size:22px!important}
 }
+
+
+/* Tighten hero and remaining major vertical spacing; center mobile trust badges. */
+.hero-copy{padding-top:58px!important;padding-bottom:48px!important}
+.actions{margin-top:24px!important}
+.trust{margin-top:22px!important}
+.product-showcase{padding-top:52px!important;padding-bottom:52px!important}
+.feature-split>div{padding-top:52px!important;padding-bottom:52px!important}
+.contact-person{padding-top:26px!important;padding-bottom:26px!important}
+footer{padding-top:24px!important;padding-bottom:32px!important}
+@media(max-width:900px){
+  .hero-copy{padding-top:40px!important;padding-bottom:34px!important}
+  .product-showcase{padding-top:38px!important;padding-bottom:38px!important}
+  .feature-split>div{padding-top:38px!important;padding-bottom:38px!important}
+}
+@media(max-width:560px){
+  .hero-copy{padding-top:32px!important;padding-bottom:28px!important;text-align:center}
+  .hero-copy .actions{align-items:center!important}
+  .hero-copy .trust{justify-content:center!important}
+  .hero-copy .trust span{text-align:center!important}
+  .product-showcase{padding-top:32px!important;padding-bottom:32px!important}
+  .feature-split>div{padding-top:32px!important;padding-bottom:32px!important}
+}
