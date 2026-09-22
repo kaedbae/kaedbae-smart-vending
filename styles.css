@@ -1831,3 +1831,11 @@ a[href^="mailto:"],a[href^="tel:"]{
   .benefits article,.placement-steps article{padding:18px 20px!important}
   .placement-process,.how,.fit,.faq-wrap,.cta,.why-kaybee,.about-kaybee{padding-top:36px!important;padding-bottom:36px!important}
 }
+
+
+/* Step-label alignment: preserve existing typography. */
+.placement-steps article{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:baseline}
+.placement-steps article>span{grid-column:1}
+.placement-steps article>h3{grid-column:2;margin-top:0!important}
+.placement-steps article>p{grid-column:1 / -1}
+.steps div>span{font-size:13px!important;font-weight:900!important;font-family:inherit!important;line-height:normal!important}
