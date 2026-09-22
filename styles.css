@@ -1307,3 +1307,5 @@ a[href^="mailto:"],a[href^="tel:"]{
 .about-kaybee h2{font-size:clamp(36px,4.2vw,58px);line-height:1.04;letter-spacing:-1.5px;margin:0 0 22px;font-weight:900}
 .about-kaybee>p:last-child{font-size:18px;line-height:1.7;color:var(--muted);margin:0}
 @media(max-width:700px){.testimonial-grid{grid-template-columns:1fr}.trusted-strip{justify-content:center}.about-kaybee{padding:65px 24px}}
+
+.about-kaybee .parent-company{margin-top:16px!important;font-size:14px!important}.about-kaybee .parent-company a{font-weight:850;color:var(--blue);text-decoration:underline;text-underline-offset:4px}
