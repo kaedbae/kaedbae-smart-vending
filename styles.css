@@ -3017,3 +3017,108 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   .machine-visual .dim-depth::before,
   .machine-visual .dim-depth::after{width:34px!important}
 }
+
+
+/* Simplified Plus 440 presentation based on the supplied reference.
+   Built as live page content — not a screenshot. */
+.machine-feature-banner{
+  display:grid!important;
+  grid-template-columns:minmax(250px,.62fr) minmax(300px,.72fr) minmax(420px,1.06fr)!important;
+  grid-template-areas:"heading details visual"!important;
+  align-items:center!important;
+  gap:34px!important;
+  min-height:600px!important;
+  height:auto!important;
+  padding:44px max(24px,calc((100vw - var(--max))/2))!important;
+  background:#dff3fb!important;
+  overflow:hidden!important;
+}
+.machine-section-heading{
+  grid-area:heading!important;
+  align-self:center!important;
+  background:transparent!important;
+}
+.machine-details{
+  grid-area:details!important;
+  width:100%!important;
+  max-width:390px!important;
+  margin:0!important;
+  padding:0!important;
+  justify-self:center!important;
+}
+.machine-art-scroll{
+  grid-area:visual!important;
+  width:100%!important;
+  height:520px!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  background:transparent!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.machine-visual{
+  position:relative!important;
+  width:100%!important;
+  height:100%!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.machine-visual>img{
+  width:100%!important;
+  max-width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+  margin:0!important;
+  background:transparent!important;
+  mix-blend-mode:multiply!important;
+}
+.machine-dimensions{display:none!important}
+.machine-model{margin:0 0 4px!important}
+.machine-details h3{margin:0 0 22px!important}
+.machine-stats{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:12px!important;
+  margin:0 0 24px!important;
+}
+.machine-stats span{
+  width:100%!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+}
+.machine-specs{width:100%!important;margin:0 0 22px!important}
+.machine-specs div{width:100%!important}
+.machine-categories{gap:8px!important}
+@media(max-width:900px){
+  .machine-feature-banner{
+    grid-template-columns:1fr 1fr!important;
+    grid-template-areas:"heading heading" "details visual"!important;
+    gap:24px 30px!important;
+    min-height:0!important;
+  }
+  .machine-section-heading{text-align:center!important}
+  .machine-art-scroll{height:470px!important}
+}
+@media(max-width:700px){
+  .machine-feature-banner{
+    grid-template-columns:1fr!important;
+    grid-template-areas:"heading" "visual" "details"!important;
+    gap:20px!important;
+    padding:28px 18px 32px!important;
+  }
+  .machine-art-scroll{
+    width:100%!important;
+    height:min(450px,62vh)!important;
+  }
+  .machine-details{
+    width:min(100%,520px)!important;
+    max-width:520px!important;
+    justify-self:center!important;
+  }
+}
