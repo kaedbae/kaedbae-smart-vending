@@ -1719,3 +1719,26 @@ a[href^="mailto:"],a[href^="tel:"]{
   object-position:center!important;
   background:#fff!important;
 }
+
+
+/* Gallery UI polish: styling only; image assets and layout unchanged. */
+.product-showcase .gallery-stage{
+  border-radius:20px!important;
+  background:transparent!important;
+}
+.product-showcase .gallery-stage>img{
+  border-radius:18px!important;
+  background:transparent!important;
+}
+.product-showcase .gallery-thumb{
+  border-radius:14px!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.product-showcase .gallery-thumb img{
+  border-radius:12px!important;
+  background:transparent!important;
+}
+.product-showcase .gallery-thumb.active{
+  box-shadow:0 0 0 1px rgba(255,255,255,.28)!important;
+}
