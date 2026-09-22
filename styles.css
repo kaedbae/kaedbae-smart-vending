@@ -2328,3 +2328,9 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   mix-blend-mode:multiply!important;
   filter:none!important;
 }
+
+
+/* Match machine spotlight heading font to the main section-heading typography. */
+.machine-section-heading h2{
+  font-family:inherit!important;
+}
