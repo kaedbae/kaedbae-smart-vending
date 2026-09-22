@@ -545,3 +545,10 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
   }
   .footer-nav{gap:4px 20px}
 }
+
+/* Keep email links above decorative layers and clickable on desktop */
+a[href^="mailto:"],a[href^="tel:"]{
+  pointer-events:auto !important;
+  position:relative !important;
+  z-index:50 !important;
+}
