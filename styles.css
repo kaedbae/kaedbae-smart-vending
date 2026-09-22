@@ -621,3 +621,39 @@ a[href^="mailto:"],a[href^="tel:"]{
     justify-content:center !important;
   }
 }
+
+/* SMART COOLER IMAGE POSITION — show full artwork and move it left */
+.machine-section{
+  grid-template-columns:1fr 1fr !important;
+}
+.machine-image{
+  padding:0 !important;
+  min-height:0 !important;
+  height:auto !important;
+  background:#050706 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  overflow:hidden !important;
+}
+.machine-image img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  transform:translateX(-18px) !important;
+}
+@media(max-width:900px){
+  .machine-section{grid-template-columns:1fr !important}
+  .machine-image{
+    justify-content:center !important;
+    padding:0 !important;
+  }
+  .machine-image img{
+    width:100% !important;
+    transform:none !important;
+    object-position:center center !important;
+  }
+}
