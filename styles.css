@@ -657,3 +657,105 @@ a[href^="mailto:"],a[href^="tel:"]{
     object-position:center center !important;
   }
 }
+
+/* IMAGE-FIRST PRODUCT GALLERY */
+.product-showcase{
+  grid-template-columns:minmax(260px,.62fr) minmax(0,1.38fr) !important;
+  gap:48px !important;
+  align-items:center !important;
+  padding-top:90px !important;
+  padding-bottom:90px !important;
+}
+.product-copy{
+  align-self:center !important;
+  max-width:420px !important;
+}
+.product-copy h2{
+  font-size:clamp(42px,4.5vw,66px) !important;
+  line-height:1.02 !important;
+  margin-bottom:22px !important;
+}
+.product-copy>p:last-child{
+  font-size:18px !important;
+  line-height:1.7 !important;
+  color:#e4f1f6 !important;
+}
+.product-gallery{
+  grid-template-columns:92px minmax(0,1fr) !important;
+  gap:18px !important;
+  width:100% !important;
+  max-width:900px !important;
+  justify-self:end !important;
+}
+.gallery-thumbs{
+  gap:12px !important;
+}
+.gallery-thumb{
+  width:92px !important;
+  height:76px !important;
+  border-radius:10px !important;
+  opacity:.68;
+  border:2px solid transparent !important;
+}
+.gallery-thumb.active{
+  opacity:1;
+  border-color:#fff !important;
+}
+.gallery-stage{
+  width:100% !important;
+  min-height:560px !important;
+  border-radius:16px !important;
+  overflow:hidden !important;
+  background:#fff !important;
+  box-shadow:0 18px 45px rgba(0,0,0,.18) !important;
+}
+.gallery-stage img{
+  width:100% !important;
+  height:560px !important;
+  object-fit:contain !important;
+  background:#fff !important;
+}
+.gallery-arrow{
+  width:52px !important;
+  height:52px !important;
+  font-size:34px !important;
+}
+@media(max-width:900px){
+  .product-showcase{
+    grid-template-columns:1fr !important;
+    gap:32px !important;
+    padding:65px 20px !important;
+  }
+  .product-copy{
+    max-width:680px !important;
+    text-align:center !important;
+    margin:0 auto !important;
+  }
+  .product-gallery{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    max-width:760px !important;
+    margin:0 auto !important;
+  }
+  .product-showcase .gallery-thumbs{
+    display:flex !important;
+    order:2;
+    overflow-x:auto;
+    padding-top:12px;
+  }
+  .gallery-thumb{
+    flex:0 0 82px !important;
+    width:82px !important;
+    height:68px !important;
+  }
+  .product-showcase .gallery-stage{
+    order:1;
+    min-height:0 !important;
+  }
+  .product-showcase .gallery-stage img{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    object-fit:contain !important;
+  }
+}
