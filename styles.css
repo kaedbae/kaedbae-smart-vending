@@ -3228,3 +3228,81 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   }
   .machine-art-scroll{height:300px!important}
 }
+
+
+/* Refined safe checkout: compact desktop presentation and phone-first layout. */
+.safe-checkout{
+  max-width:1100px!important;
+  margin:0 auto!important;
+  padding:18px 24px 44px!important;
+}
+.safe-checkout-rule{gap:20px!important}
+.safe-checkout h2{
+  font-size:clamp(25px,2.3vw,34px)!important;
+  letter-spacing:-.6px!important;
+}
+.payment-methods{
+  margin-top:26px!important;
+  gap:24px!important;
+  flex-wrap:nowrap!important;
+}
+.payment-brand{
+  width:86px!important;
+  height:52px!important;
+  flex:0 0 86px!important;
+}
+.payment-brand.visa{font-size:26px!important}
+.payment-brand.paypal{font-size:19px!important}
+
+@media(max-width:700px){
+  .safe-checkout{
+    padding:18px 18px 32px!important;
+  }
+  .safe-checkout-rule{
+    gap:10px!important;
+  }
+  .safe-checkout h2{
+    font-size:22px!important;
+    line-height:1.1!important;
+    letter-spacing:-.35px!important;
+    white-space:nowrap!important;
+  }
+  .payment-methods{
+    display:grid!important;
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    gap:7px!important;
+    margin-top:18px!important;
+    width:100%!important;
+  }
+  .payment-brand{
+    width:100%!important;
+    min-width:0!important;
+    height:42px!important;
+    flex:none!important;
+    border-radius:5px!important;
+  }
+  .payment-brand.visa{font-size:19px!important}
+  .payment-brand.amex{font-size:9px!important}
+  .payment-brand.discover{font-size:9px!important}
+  .payment-brand.paypal{font-size:13px!important}
+  .payment-brand.mastercard::before,
+  .payment-brand.mastercard::after{
+    width:21px!important;
+    height:21px!important;
+    top:6px!important;
+  }
+  .payment-brand.mastercard::before{left:calc(50% - 18px)!important}
+  .payment-brand.mastercard::after{right:calc(50% - 18px)!important}
+  .payment-brand.mastercard b{
+    bottom:3px!important;
+    font-size:6px!important;
+  }
+}
+@media(max-width:390px){
+  .safe-checkout{padding-left:12px!important;padding-right:12px!important}
+  .safe-checkout h2{font-size:19px!important}
+  .payment-methods{gap:5px!important}
+  .payment-brand{height:38px!important}
+  .payment-brand.visa{font-size:17px!important}
+  .payment-brand.paypal{font-size:11px!important}
+}
