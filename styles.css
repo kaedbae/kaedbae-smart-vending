@@ -3408,3 +3408,52 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
     border-radius:12px!important;
   }
 }
+
+
+/* Definitive responsive containment for integrated Plus 440 artwork. */
+.machine-integrated-picture{
+  display:block!important;
+  width:100%!important;
+  max-width:1920px!important;
+  margin:0 auto!important;
+}
+.machine-integrated-picture .machine-integrated-art{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+}
+@media(max-width:700px){
+  html,body{max-width:100%!important;overflow-x:hidden!important}
+  #machine.machine-integrated{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:0!important;
+    overflow:hidden!important;
+    background:#dff3fb!important;
+  }
+  #machine .machine-integrated-picture{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+  #machine .machine-integrated-art{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    transform:none!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    border-radius:0!important;
+  }
+}
