@@ -3527,3 +3527,42 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
     transform:translateY(-1px)!important;
   }
 }
+
+
+/* Desktop hero CTAs: consistent button geometry with clear primary/secondary hierarchy. */
+@media(min-width:561px){
+  .hero .actions{
+    align-items:stretch!important;
+  }
+  .hero .actions .btn,
+  .hero .actions .text-link{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+    min-height:52px!important;
+    padding:13px 22px!important;
+    border-radius:7px!important;
+    font-size:15px!important;
+    font-weight:800!important;
+    line-height:1.2!important;
+  }
+  .hero .actions .btn{
+    background:#fff!important;
+    color:#173448!important;
+    border:1px solid #fff!important;
+  }
+  .hero .actions .text-link{
+    background:transparent!important;
+    color:#fff!important;
+    border:1px solid rgba(255,255,255,.72)!important;
+  }
+  .hero .actions .btn:hover{
+    background:#eef8fc!important;
+    border-color:#eef8fc!important;
+  }
+  .hero .actions .text-link:hover{
+    background:rgba(255,255,255,.13)!important;
+    border-color:#fff!important;
+  }
+}
