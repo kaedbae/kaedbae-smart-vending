@@ -1206,3 +1206,19 @@ a[href^="mailto:"],a[href^="tel:"]{
  .machine-image{height:auto!important;padding:24px!important}
  .machine-image img{width:92%!important;height:auto!important;max-width:620px!important;max-height:none!important}
 }
+
+/* SMART COOLER: COMPACT ARTWORK */
+@media(min-width:901px){
+  .machine-image{
+    height:460px!important;
+    padding:42px 60px!important;
+  }
+  .machine-image img{
+    width:76%!important;
+    height:76%!important;
+    max-width:590px!important;
+    max-height:370px!important;
+    object-fit:contain!important;
+    margin:auto!important;
+  }
+}
