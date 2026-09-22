@@ -3566,3 +3566,38 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
     border-color:#fff!important;
   }
 }
+
+
+/* Final hero CTA treatment: blend into hero, no boxes/outlines. */
+.hero .actions .btn,
+.hero .actions .text-link{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:#fff!important;
+  border-radius:0!important;
+  transition:opacity .18s ease,transform .18s ease!important;
+}
+.hero .actions .btn:hover,
+.hero .actions .text-link:hover{
+  background:transparent!important;
+  border:0!important;
+  color:#fff!important;
+  opacity:.76!important;
+  transform:translateY(-1px)!important;
+}
+.hero .actions .btn:active,
+.hero .actions .text-link:active{
+  opacity:.62!important;
+  transform:scale(.98)!important;
+}
+@media(max-width:560px){
+  .hero .actions .btn,
+  .hero .actions .text-link{
+    background:transparent!important;
+    border:0!important;
+    color:#fff!important;
+    border-radius:0!important;
+  }
+  .hero-copy{padding-bottom:38px!important}
+}
