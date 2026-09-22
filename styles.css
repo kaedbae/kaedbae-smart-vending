@@ -367,3 +367,86 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
     gap: 12px;
   }
 }
+
+
+/* WHY KAYBEEVENDING */
+.why-kaybee {
+  padding: 100px max(24px, calc((100vw - 1180px) / 2));
+  background: #f1f7fa;
+}
+.why-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+.why-heading h2 {
+  margin: 0 0 18px;
+  font-size: clamp(38px, 4.6vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -1.5px;
+  font-weight: 900;
+}
+.why-heading > p:last-child {
+  color: #637785;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.why-grid article {
+  background: #fff;
+  border: 1px solid #d5e4ec;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(35,95,123,.06);
+}
+.why-grid h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #263746;
+}
+.why-grid p {
+  margin: 0;
+  color: #637785;
+  line-height: 1.7;
+}
+@media (max-width: 800px) {
+  .why-kaybee { padding: 70px 24px; }
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+/* PRIVACY PAGE */
+.privacy-page { background: #fff; }
+.privacy-hero {
+  background: #2b789c;
+  color: #fff;
+  padding: 90px max(24px, calc((100vw - 900px) / 2)) 70px;
+}
+.privacy-hero .eyebrow { color: #d9eef7; }
+.privacy-hero h1 {
+  margin: 0 0 22px;
+  font-size: clamp(46px, 7vw, 72px);
+  letter-spacing: -2px;
+}
+.privacy-hero p:last-child {
+  max-width: 720px;
+  color: #eef8fc;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.privacy-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 70px 24px 100px;
+}
+.privacy-content h2 {
+  margin: 38px 0 10px;
+  font-size: 26px;
+}
+.privacy-content p {
+  color: #637785;
+  line-height: 1.75;
+}
+.privacy-content a { color: #2b789c; font-weight: 700; }
