@@ -182,3 +182,43 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
     transform: none !important;
   }
 }
+/* PROFESSIONAL TRUST BAR */
+.trust-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 22px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #d5e4ec;
+}
+
+.trust-bar span {
+  padding: 0 28px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #263746;
+  text-align: center;
+}
+
+.trust-bar span + span {
+  border-left: 1px solid #d5e4ec;
+}
+
+@media (max-width: 700px) {
+  .trust-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 18px 14px;
+  }
+
+  .trust-bar span {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .trust-bar span + span {
+    border-left: none;
+  }
+}
