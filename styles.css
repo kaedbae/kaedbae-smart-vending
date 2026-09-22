@@ -1289,3 +1289,6 @@ a[href^="mailto:"],a[href^="tel:"]{
   pointer-events:auto!important;
   cursor:pointer!important;
 }
+
+/* DIRECT CONTACT ACTIONS */
+.contact-action{appearance:none!important;-webkit-appearance:none!important;border:0!important;background:transparent!important;padding:0!important;color:#fff!important;font:inherit!important;font-weight:750!important;text-decoration:underline!important;text-underline-offset:5px!important;cursor:pointer!important;width:max-content!important;text-align:left!important;position:relative!important;z-index:999!important;pointer-events:auto!important}
