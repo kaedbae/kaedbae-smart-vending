@@ -13,7 +13,7 @@ nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   menu?.setAttribute('aria-expanded', 'false');
 }));
 
-// CONTACT FORM — submit directly through Formspree
+// CONTACT FORM: submit directly through Formspree
 const leadForm = document.getElementById('leadForm');
 const formStatus = document.getElementById('formStatus');
 
