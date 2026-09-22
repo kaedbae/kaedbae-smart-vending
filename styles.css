@@ -3306,3 +3306,50 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   .payment-brand.visa{font-size:17px!important}
   .payment-brand.paypal{font-size:11px!important}
 }
+
+
+/* Final integrated Plus 440 artwork. */
+.machine-integrated{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:0!important;
+  margin:0!important;
+  overflow:hidden!important;
+  background:#dff3fb!important;
+}
+.machine-integrated-art{
+  display:block!important;
+  width:100%!important;
+  max-width:1920px!important;
+  height:auto!important;
+  margin:0 auto!important;
+  object-fit:contain!important;
+  background:#dff3fb!important;
+}
+.machine-integrated-cta{
+  position:absolute!important;
+  inset:0!important;
+  z-index:2!important;
+}
+@media(max-width:700px){
+  .machine-integrated{
+    overflow:hidden!important;
+  }
+  .machine-integrated-art{
+    width:155%!important;
+    max-width:none!important;
+    margin-left:-27.5%!important;
+    height:auto!important;
+  }
+}
+@media(max-width:420px){
+  .machine-integrated-art{
+    width:170%!important;
+    margin-left:-35%!important;
+  }
+}
