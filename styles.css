@@ -222,3 +222,63 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
     border-left: none;
   }
 }
+/* ABOUT KAYBEEVENDING */
+.about-kaybee {
+  background: #ffffff;
+  padding: 100px 24px;
+}
+
+.about-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-kaybee h2 {
+  margin: 0 0 24px;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  font-weight: 900;
+  color: #263746;
+}
+
+.about-kaybee > .about-inner > p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.7;
+  color: #637785;
+}
+
+.about-points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.about-points span {
+  padding: 10px 18px;
+  border: 1px solid #d5e4ec;
+  border-radius: 999px;
+  color: #2b789c;
+  font-size: 13px;
+  font-weight: 800;
+  background: #f1f7fa;
+}
+
+@media (max-width: 560px) {
+  .about-kaybee {
+    padding: 70px 24px;
+  }
+
+  .about-kaybee h2 {
+    font-size: 40px;
+  }
+
+  .about-kaybee > .about-inner > p:not(.eyebrow) {
+    font-size: 17px;
+  }
+}
