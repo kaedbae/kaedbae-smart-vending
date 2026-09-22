@@ -828,6 +828,67 @@ a[href^="mailto:"],a[href^="tel:"]{
 .product-showcase .gallery-thumb img{
   background:transparent !important;
 }
+
+/* Header contact strip */
+.contact-bar{
+  background:#050505;
+  color:#fff;
+}
+.contact-bar-inner{
+  width:100%;
+  max-width:var(--max);
+  min-height:42px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+.contact-bar a{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  font-size:14px;
+  font-weight:700;
+  color:#fff;
+}
+.contact-bar a:hover{
+  color:#bfe3f1;
+}
+.contact-bar svg{
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  fill:currentColor;
+}
+@media(max-width:560px){
+  .contact-bar-inner{
+    min-height:40px;
+    padding:0 16px;
+    justify-content:center;
+    gap:24px;
+  }
+  .contact-bar a{
+    width:36px;
+    height:36px;
+    justify-content:center;
+  }
+  .contact-bar a span{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+  .contact-bar svg{
+    width:20px;
+    height:20px;
+  }
+}
 @media(max-width:900px){
   .product-showcase .gallery-stage,
   .product-showcase .gallery-stage img{
