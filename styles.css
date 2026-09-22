@@ -3601,3 +3601,10 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   }
   .hero-copy{padding-bottom:38px!important}
 }
+
+
+/* Desktop hero headline: keep the service headline to two clean lines. Mobile unchanged. */
+@media(min-width:901px){
+  .hero-copy{max-width:1180px!important;}
+  .hero-copy h1{max-width:1180px!important;}
+}
