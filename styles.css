@@ -1801,3 +1801,10 @@ a[href^="mailto:"],a[href^="tel:"]{
   .how{padding-top:38px!important;padding-bottom:38px!important}
   .steps{margin-top:22px!important}
 }
+
+
+/* Tap / Grab / Go: keep step number and title on one line to save height. */
+.steps div{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:baseline}
+.steps div>span{grid-column:1}
+.steps div>h3{grid-column:2;margin-top:0!important;margin-bottom:7px!important}
+.steps div>p{grid-column:1 / -1}
