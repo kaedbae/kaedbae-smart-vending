@@ -1808,3 +1808,26 @@ a[href^="mailto:"],a[href^="tel:"]{
 .steps div>span{grid-column:1}
 .steps div>h3{grid-column:2;margin-top:0!important;margin-bottom:7px!important}
 .steps div>p{grid-column:1 / -1}
+
+
+/* Site-wide tighter vertical rhythm + consistent card dimensions. */
+.intro{padding-top:64px!important;padding-bottom:54px!important}
+.benefits{margin-bottom:64px!important}
+.benefits article,.placement-steps article{padding:24px 28px!important;border-radius:18px!important}
+.benefits h3,.placement-steps h3{margin:10px 0 7px!important}
+.benefits p,.placement-steps p{margin:0!important;line-height:1.65!important}
+.how,.placement-process{padding-top:52px!important;padding-bottom:52px!important}
+.fit,.faq-wrap,.cta{padding-top:64px!important;padding-bottom:64px!important}
+.why-kaybee,.about-kaybee{padding-top:64px!important;padding-bottom:64px!important}
+.steps div{border-top:1px solid var(--line)!important;background:var(--soft)!important;border-radius:18px!important;box-shadow:0 8px 24px rgba(35,95,123,.05)!important}
+@media(max-width:900px){
+  .intro{padding-top:48px!important;padding-bottom:42px!important}
+  .benefits{margin-bottom:48px!important}
+  .placement-process,.how,.fit,.faq-wrap,.cta,.why-kaybee,.about-kaybee{padding-top:44px!important;padding-bottom:44px!important}
+}
+@media(max-width:560px){
+  .intro{padding-top:38px!important;padding-bottom:34px!important}
+  .benefits{margin-bottom:38px!important}
+  .benefits article,.placement-steps article{padding:18px 20px!important}
+  .placement-process,.how,.fit,.faq-wrap,.cta,.why-kaybee,.about-kaybee{padding-top:36px!important;padding-bottom:36px!important}
+}
