@@ -2237,3 +2237,56 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
     transform:translateX(-51%)!important;
   }
 }
+
+
+/* Fix spotlight seams by using one uniform section color and blending artwork into it. */
+.machine-feature-banner,
+.machine-feature-banner .machine-section-heading,
+.machine-feature-banner .machine-art-scroll{
+  background:#dff3fb!important;
+}
+.machine-feature-banner .machine-art-scroll>img{
+  mix-blend-mode:multiply!important;
+}
+
+/* Restore full mobile contact details: icon + text, matching desktop content. */
+@media(max-width:560px){
+  .contact-bar{overflow:visible!important}
+  .contact-bar-inner{
+    width:100%!important;
+    max-width:none!important;
+    min-height:44px!important;
+    padding:5px 10px!important;
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:12px!important;
+  }
+  .contact-bar a{
+    display:inline-flex!important;
+    width:auto!important;
+    height:auto!important;
+    min-width:0!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:5px!important;
+    padding:0!important;
+    font-size:11px!important;
+    white-space:nowrap!important;
+  }
+  .contact-bar a span{
+    display:inline!important;
+    visibility:visible!important;
+    opacity:1!important;
+    width:auto!important;
+    height:auto!important;
+    position:static!important;
+    overflow:visible!important;
+  }
+  .contact-bar svg{
+    width:15px!important;
+    height:15px!important;
+    flex:0 0 15px!important;
+  }
+}
