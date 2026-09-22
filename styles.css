@@ -1222,3 +1222,19 @@ a[href^="mailto:"],a[href^="tel:"]{
     margin:auto!important;
   }
 }
+
+/* SMART COOLER: SMALL DESKTOP ARTWORK */
+@media(min-width:901px){
+  .machine-image{
+    height:420px!important;
+    padding:55px 80px!important;
+  }
+  .machine-image img{
+    width:58%!important;
+    height:auto!important;
+    max-width:450px!important;
+    max-height:310px!important;
+    object-fit:contain!important;
+    margin:auto!important;
+  }
+}
