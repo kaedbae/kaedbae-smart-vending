@@ -910,13 +910,13 @@ a[href^="mailto:"],a[href^="tel:"]{
   .machine-mobile-heading{
     display:block;
     margin:0;
-    padding:28px 20px 20px;
+    padding:16px 20px;
     color:#17384b;
     background:#dff3fb;
     text-align:center;
   }
   .machine-mobile-heading p{
-    margin:0 0 8px;
+    margin:0;
     color:#2a718f;
     font-size:12px;
     font-weight:900;
