@@ -592,3 +592,32 @@ a[href^="mailto:"],a[href^="tel:"]{
     object-fit:contain !important;
   }
 }
+
+/* CENTER FULL-WIDTH HERO CONTENT */
+.hero-copy{
+  max-width:1000px !important;
+  margin:0 auto !important;
+  text-align:center !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+}
+.hero-copy h1,
+.hero-copy .lead{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.hero-copy .actions,
+.hero-copy .trust{
+  justify-content:center !important;
+}
+@media(max-width:900px){
+  .hero-copy{
+    text-align:center !important;
+    align-items:center !important;
+  }
+  .hero-copy .actions,
+  .hero-copy .trust{
+    justify-content:center !important;
+  }
+}
