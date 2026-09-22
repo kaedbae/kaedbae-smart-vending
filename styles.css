@@ -471,3 +471,18 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
 .footer-logo strong{font-size:24px}
 .site-footer{gap:20px}
 @media(max-width:900px){.nav{height:68px}.placement-process{padding:70px 24px}.placement-steps{grid-template-columns:1fr}}
+
+/* Make contact details clearly interactive */
+.contact-links a{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  text-decoration:underline;
+  text-underline-offset:4px;
+  cursor:pointer;
+  transition:opacity .18s ease,transform .18s ease;
+}
+.contact-links a:hover{
+  opacity:.82;
+  transform:translateX(2px);
+}
