@@ -1878,3 +1878,26 @@ form{padding:24px!important;gap:14px!important}
   .faq details{padding-top:12px!important;padding-bottom:12px!important}
   form{padding:20px!important;gap:12px!important}
 }
+
+
+/* Constrain Plus 440-AI main gallery image to the visible viewport. */
+.product-showcase .gallery-stage{
+  max-height:min(72vh,760px)!important;
+}
+.product-showcase .gallery-stage>img,
+.product-showcase .gallery-stage:hover>img{
+  width:100%!important;
+  height:100%!important;
+  max-height:min(72vh,760px)!important;
+  object-fit:contain!important;
+}
+@media(max-width:900px){
+  .product-showcase .gallery-stage{max-height:68vh!important}
+  .product-showcase .gallery-stage>img,
+  .product-showcase .gallery-stage:hover>img{max-height:68vh!important}
+}
+@media(max-width:560px){
+  .product-showcase .gallery-stage{max-height:58vh!important}
+  .product-showcase .gallery-stage>img,
+  .product-showcase .gallery-stage:hover>img{max-height:58vh!important}
+}
