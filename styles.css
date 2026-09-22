@@ -886,6 +886,9 @@ a[href^="mailto:"],a[href^="tel:"]{
 .machine-mobile-heading{
   display:none;
 }
+.machine-mobile-cta{
+  display:none;
+}
 .machine-image-cta{
   position:absolute!important;
   z-index:5!important;
@@ -916,7 +919,7 @@ a[href^="mailto:"],a[href^="tel:"]{
     text-align:center;
   }
   .machine-mobile-heading p{
-    margin:0;
+    margin:0 0 8px;
     color:#2a718f;
     font-size:12px;
     font-weight:900;
@@ -932,17 +935,22 @@ a[href^="mailto:"],a[href^="tel:"]{
   .machine-art-scroll{
     width:100%;
     overflow:hidden;
+    aspect-ratio:1 / 1;
   }
   .machine-art-scroll>img{
-    width:100%!important;
-    max-width:100%!important;
+    width:195%!important;
+    max-width:none!important;
     height:auto!important;
     margin:0!important;
-    transform:none!important;
+    transform:translateX(-48%)!important;
   }
   .machine-image-cta{
-    min-width:82px;
-    min-height:30px;
+    display:none!important;
+  }
+  .machine-mobile-cta{
+    display:flex;
+    width:calc(100% - 40px);
+    margin:18px 20px 26px;
   }
 }
 @media(max-width:560px){
