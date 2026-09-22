@@ -2073,3 +2073,28 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   .steps h3,
   .why-grid h3{font-size:20px!important}
 }
+
+
+/* Mobile contact bar: show the same icon + contact text as desktop. */
+@media(max-width:560px){
+  .contact-bar-inner{
+    width:100%!important;
+    min-height:42px!important;
+    padding:6px 16px!important;
+    display:flex!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:18px!important;
+    flex-wrap:wrap!important;
+  }
+  .contact-bar a{
+    width:auto!important;
+    height:auto!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    gap:7px!important;
+    font-size:12px!important;
+    white-space:nowrap!important;
+  }
+  .contact-bar a span{display:inline!important}
+}
