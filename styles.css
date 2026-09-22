@@ -486,3 +486,26 @@ input,select,textarea{border-color:#c9dce5;border-radius:10px}.contact-person{bo
   opacity:.82;
   transform:translateX(2px);
 }
+
+/* FULL-WIDTH HERO — product image intentionally removed */
+.hero{
+  display:block !important;
+  width:100%;
+  min-height:620px;
+  background:var(--blue);
+}
+.hero-copy{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:95px 24px 90px !important;
+}
+.hero-copy h1{
+  max-width:980px;
+}
+.hero-copy .lead{
+  max-width:720px;
+}
+@media(max-width:900px){
+  .hero{min-height:0}
+  .hero-copy{padding:70px 24px 65px !important}
+}
