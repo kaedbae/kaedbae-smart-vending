@@ -1778,3 +1778,26 @@ a[href^="mailto:"],a[href^="tel:"]{
 @media(min-width:901px){
   .contact-bar-inner{justify-content:center!important}
 }
+
+
+/* Compact vertical rhythm and cards across desktop + mobile; typography unchanged. */
+.placement-process{padding-top:64px!important;padding-bottom:64px!important}
+.placement-heading{margin-bottom:28px!important}
+.placement-steps article{padding:24px 28px!important}
+.placement-steps h3{margin:10px 0 7px!important}
+.how{padding-top:64px!important;padding-bottom:64px!important}
+.steps{margin-top:30px!important}
+.steps div{padding:24px 28px!important}
+.steps h3{margin:10px 0 7px!important}
+.steps p{margin-bottom:0!important}
+@media(max-width:900px){
+  .placement-process{padding-top:48px!important;padding-bottom:48px!important}
+  .placement-heading{margin-bottom:24px!important}
+  .how{padding-top:48px!important;padding-bottom:48px!important}
+}
+@media(max-width:560px){
+  .placement-process{padding-top:38px!important;padding-bottom:38px!important}
+  .placement-steps article,.steps div{padding:18px 20px!important}
+  .how{padding-top:38px!important;padding-bottom:38px!important}
+  .steps{margin-top:22px!important}
+}
