@@ -809,3 +809,28 @@ a[href^="mailto:"],a[href^="tel:"]{
     height:88px !important;
   }
 }
+
+/* GALLERY BACKGROUND CORRECTION */
+.product-showcase .gallery-stage{
+  background:transparent !important;
+  box-shadow:none !important;
+}
+.product-showcase .gallery-stage img{
+  background:transparent !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:720px !important;
+  object-fit:contain !important;
+}
+.product-showcase .gallery-thumb{
+  background:transparent !important;
+}
+.product-showcase .gallery-thumb img{
+  background:transparent !important;
+}
+@media(max-width:900px){
+  .product-showcase .gallery-stage,
+  .product-showcase .gallery-stage img{
+    background:transparent !important;
+  }
+}
