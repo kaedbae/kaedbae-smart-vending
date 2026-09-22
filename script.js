@@ -159,3 +159,8 @@ document.addEventListener('keydown', (event) => {
     showGalleryImage(galleryIndex + 1);
   }
 });
+
+
+document.querySelectorAll('[data-contact]').forEach((el) => {
+  el.addEventListener('click', () => { window.location.href = el.dataset.contact; });
+});
