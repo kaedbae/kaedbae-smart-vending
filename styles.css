@@ -834,3 +834,81 @@ a[href^="mailto:"],a[href^="tel:"]{
     background:transparent !important;
   }
 }
+
+/* DEFINITIVE PRODUCT GALLERY LAYOUT */
+.product-showcase{
+  display:block !important;
+  padding:80px max(24px,calc((100vw - 1450px)/2)) 95px !important;
+}
+.product-showcase .gallery-copy{
+  max-width:850px !important;
+  margin:0 auto 38px !important;
+  text-align:center !important;
+}
+.product-showcase .gallery-copy h2{
+  font-size:clamp(42px,5vw,68px) !important;
+  margin:0 0 14px !important;
+}
+.product-showcase .gallery-copy p:last-child{
+  font-size:18px !important;
+  color:#e3f0f5 !important;
+  margin:0 auto !important;
+}
+.product-showcase .product-gallery{
+  display:grid !important;
+  grid-template-columns:145px minmax(0,1fr) !important;
+  gap:24px !important;
+  width:100% !important;
+  max-width:1350px !important;
+  margin:0 auto !important;
+}
+.product-showcase .gallery-thumbs{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:14px !important;
+  max-height:none !important;
+  overflow:visible !important;
+}
+.product-showcase .gallery-thumb{
+  width:145px !important;
+  height:118px !important;
+  padding:0 !important;
+  background:transparent !important;
+}
+.product-showcase .gallery-stage{
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  border-radius:14px !important;
+  overflow:hidden !important;
+}
+.product-showcase .gallery-stage img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  background:transparent !important;
+  transform:none !important;
+}
+.product-showcase .gallery-stage:hover img{transform:none !important}
+@media(max-width:900px){
+  .product-showcase{padding:60px 16px 70px !important}
+  .product-showcase .product-gallery{grid-template-columns:1fr !important}
+  .product-showcase .gallery-thumbs{
+    order:2 !important;
+    flex-direction:row !important;
+    overflow-x:auto !important;
+    gap:10px !important;
+  }
+  .product-showcase .gallery-thumb{
+    flex:0 0 105px !important;
+    width:105px !important;
+    height:86px !important;
+  }
+  .product-showcase .gallery-stage{order:1 !important}
+}
