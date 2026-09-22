@@ -105,9 +105,13 @@ function showGalleryImage(index) {
 
   const item = galleryItems[galleryIndex];
 
-  galleryItems.forEach((thumb) => thumb.classList.remove('active'));
+  galleryItems.forEach((thumb) => {
+    thumb.classList.remove('active');
+    thumb.setAttribute('aria-selected', 'false');
+  });
 
   item.classList.add('active');
+  item.setAttribute('aria-selected', 'true');
 
   galleryMain.src = item.dataset.image;
   galleryMain.alt =
@@ -147,6 +151,21 @@ galleryNext?.addEventListener('click', (event) => {
   event.stopPropagation();
   showGalleryImage(galleryIndex + 1);
 });
+
+// Touch gestures make the gallery feel natural on phones.
+let galleryTouchStartX = 0;
+
+galleryStage?.addEventListener('touchstart', (event) => {
+  galleryTouchStartX = event.changedTouches[0]?.clientX || 0;
+}, { passive: true });
+
+galleryStage?.addEventListener('touchend', (event) => {
+  const endX = event.changedTouches[0]?.clientX || 0;
+  const distance = endX - galleryTouchStartX;
+
+  if (Math.abs(distance) < 45) return;
+  showGalleryImage(galleryIndex + (distance < 0 ? 1 : -1));
+}, { passive: true });
 
 document.addEventListener('keydown', (event) => {
   if (!galleryStage || !galleryStage.matches(':hover')) return;

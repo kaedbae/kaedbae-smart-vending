@@ -1309,3 +1309,237 @@ a[href^="mailto:"],a[href^="tel:"]{
 @media(max-width:700px){.testimonial-grid{grid-template-columns:1fr}.trusted-strip{justify-content:center}.about-kaybee{padding:65px 24px}}
 
 .about-kaybee .parent-company{margin-top:16px!important;font-size:14px!important}.about-kaybee .parent-company a{font-weight:850;color:var(--blue);text-decoration:underline;text-underline-offset:4px}
+
+/* MOBILE PRODUCT GALLERY: full-width image, swipeable controls, compact copy. */
+@media(max-width:900px){
+  .product-showcase{
+    display:block!important;
+    padding:42px 16px 48px!important;
+    overflow:hidden!important;
+  }
+  .product-showcase .gallery-copy{
+    width:100%!important;
+    max-width:560px!important;
+    margin:0 auto 24px!important;
+    padding:0 4px!important;
+    text-align:center!important;
+  }
+  .product-showcase .gallery-copy .eyebrow{
+    margin-bottom:10px!important;
+    font-size:11px!important;
+    letter-spacing:2.5px!important;
+  }
+  .product-showcase .gallery-copy h2{
+    margin:0 0 12px!important;
+    font-size:clamp(34px,10vw,44px)!important;
+    line-height:1.04!important;
+    letter-spacing:-1.2px!important;
+  }
+  .product-showcase .gallery-copy p:last-child{
+    max-width:34rem!important;
+    margin:0 auto!important;
+    font-size:16px!important;
+    line-height:1.5!important;
+  }
+  .product-showcase .product-gallery{
+    display:flex!important;
+    flex-direction:column!important;
+    grid-template-columns:none!important;
+    width:100%!important;
+    max-width:560px!important;
+    margin:0 auto!important;
+    gap:14px!important;
+  }
+  .product-showcase .gallery-stage{
+    order:1!important;
+    display:grid!important;
+    place-items:center!important;
+    position:relative!important;
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:1/1!important;
+    border-radius:18px!important;
+    overflow:hidden!important;
+    background:rgba(255,255,255,.08)!important;
+    box-shadow:0 16px 36px rgba(10,38,52,.22)!important;
+    touch-action:pan-y!important;
+  }
+  .product-showcase .gallery-stage>img,
+  .product-showcase .gallery-stage:hover>img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    transform:none!important;
+    background:transparent!important;
+  }
+  .product-showcase .gallery-thumbs{
+    order:2!important;
+    display:flex!important;
+    flex-direction:row!important;
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    gap:9px!important;
+    padding:2px 2px 7px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x proximity!important;
+    scrollbar-width:none!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  .product-showcase .gallery-thumbs::-webkit-scrollbar{display:none!important}
+  .product-showcase .gallery-thumb{
+    flex:0 0 72px!important;
+    display:block!important;
+    width:72px!important;
+    height:72px!important;
+    min-width:72px!important;
+    min-height:72px!important;
+    padding:2px!important;
+    border:2px solid transparent!important;
+    border-radius:12px!important;
+    opacity:.72!important;
+    scroll-snap-align:start!important;
+  }
+  .product-showcase .gallery-thumb.active{
+    border-color:#fff!important;
+    opacity:1!important;
+    box-shadow:0 0 0 2px rgba(255,255,255,.28)!important;
+  }
+  .product-showcase .gallery-thumb img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    border-radius:8px!important;
+  }
+  .product-showcase .gallery-arrow{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:46px!important;
+    height:46px!important;
+    font-size:30px!important;
+    opacity:.96!important;
+  }
+  .product-showcase .gallery-arrow.prev{left:12px!important}
+  .product-showcase .gallery-arrow.next{right:12px!important}
+  .product-showcase .gallery-count{
+    right:12px!important;
+    bottom:12px!important;
+    padding:7px 12px!important;
+    font-size:13px!important;
+  }
+}
+
+@media(max-width:390px){
+  .product-showcase{padding-left:12px!important;padding-right:12px!important}
+  .product-showcase .gallery-copy h2{font-size:33px!important}
+  .product-showcase .gallery-copy p:last-child{font-size:15px!important}
+  .product-showcase .gallery-thumb{flex-basis:66px!important;width:66px!important;height:66px!important;min-width:66px!important;min-height:66px!important}
+}
+
+/* DESKTOP PRODUCT GALLERY: side copy with an image-first workspace. */
+@media(min-width:901px){
+  .product-showcase{
+    display:grid!important;
+    grid-template-columns:clamp(260px,22vw,340px) minmax(0,1fr)!important;
+    align-items:center!important;
+    gap:clamp(36px,4vw,72px)!important;
+    width:100%!important;
+    min-height:640px!important;
+    padding:54px max(36px,calc((100vw - 1540px)/2))!important;
+  }
+  .product-showcase .gallery-copy{
+    width:100%!important;
+    max-width:340px!important;
+    margin:0!important;
+    text-align:left!important;
+  }
+  .product-showcase .gallery-copy .eyebrow{
+    margin:0 0 16px!important;
+  }
+  .product-showcase .gallery-copy h2{
+    margin:0 0 20px!important;
+    font-size:clamp(44px,4vw,64px)!important;
+    line-height:.98!important;
+    letter-spacing:-1.8px!important;
+  }
+  .product-showcase .gallery-copy p:last-child{
+    max-width:320px!important;
+    margin:0!important;
+    font-size:17px!important;
+    line-height:1.6!important;
+  }
+  .product-showcase .product-gallery{
+    display:grid!important;
+    grid-template-columns:clamp(100px,9vw,132px) minmax(0,1fr)!important;
+    align-items:stretch!important;
+    gap:20px!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+  }
+  .product-showcase .gallery-thumbs{
+    display:grid!important;
+    grid-template-rows:repeat(6,minmax(0,1fr))!important;
+    flex-direction:unset!important;
+    width:100%!important;
+    height:min(68vh,640px)!important;
+    max-height:640px!important;
+    gap:9px!important;
+    overflow:visible!important;
+  }
+  .product-showcase .gallery-thumb{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    padding:2px!important;
+    border-radius:12px!important;
+  }
+  .product-showcase .gallery-thumb img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    border-radius:8px!important;
+  }
+  .product-showcase .gallery-stage{
+    display:grid!important;
+    place-items:center!important;
+    position:relative!important;
+    width:100%!important;
+    max-width:none!important;
+    height:min(68vh,640px)!important;
+    max-height:640px!important;
+    min-height:500px!important;
+    border-radius:18px!important;
+    overflow:hidden!important;
+    background:rgba(255,255,255,.06)!important;
+    box-shadow:0 20px 48px rgba(10,38,52,.24)!important;
+  }
+  .product-showcase .gallery-stage>img{
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    max-height:none!important;
+    object-fit:contain!important;
+  }
+}
+
+@media(min-width:901px) and (max-width:1120px){
+  .product-showcase{
+    grid-template-columns:250px minmax(0,1fr)!important;
+    gap:32px!important;
+    padding-left:28px!important;
+    padding-right:28px!important;
+  }
+  .product-showcase .gallery-copy h2{font-size:42px!important}
+  .product-showcase .gallery-copy p:last-child{font-size:16px!important}
+  .product-showcase .product-gallery{grid-template-columns:96px minmax(0,1fr)!important;gap:14px!important}
+}
