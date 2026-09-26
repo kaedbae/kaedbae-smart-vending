@@ -7524,53 +7524,8 @@ footer strong{
 }
 
 
-/* CAROUSEL — desktop sizing: give the main image more of the section width. */
-@media (min-width: 901px){
-  .product-showcase{
-    grid-template-columns:minmax(300px,.62fr) minmax(0,1.38fr)!important;
-    gap:36px!important;
-  }
-  .product-showcase .product-gallery{
-    grid-template-columns:104px minmax(0,1fr)!important;
-    gap:16px!important;
-    max-width:none!important;
-  }
-  .product-showcase .gallery-image-wrap>img{
-    width:100%!important;
-    max-width:none!important;
-  }
-}
 
 
-/* CAROUSEL — desktop image enlargement: override legacy section width/padding caps. */
-@media (min-width:901px){
-  .product-showcase{
-    width:100%!important;
-    max-width:none!important;
-    box-sizing:border-box!important;
-    padding-left:clamp(24px,3vw,56px)!important;
-    padding-right:clamp(24px,3vw,56px)!important;
-    grid-template-columns:minmax(260px,25vw) minmax(0,1fr)!important;
-    gap:28px!important;
-  }
-  .product-showcase .product-gallery{
-    width:100%!important;
-    max-width:none!important;
-    grid-template-columns:92px minmax(0,1fr)!important;
-    gap:14px!important;
-  }
-  .product-showcase .gallery-stage,
-  .product-showcase .gallery-image-wrap{
-    width:100%!important;
-    max-width:none!important;
-  }
-  .product-showcase .gallery-image-wrap>img{
-    display:block!important;
-    width:100%!important;
-    max-width:none!important;
-    height:auto!important;
-  }
-}
 
 
 /* FEATURES — keep intro and benefit cards on one continuous background. */
