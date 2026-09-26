@@ -1,0 +1,271 @@
+/* Target hero layout based on approved desktop + mobile references. */
+.contact-bar{display:none!important}
+
+.nav{
+  position:relative!important;
+  top:auto!important;
+  max-width:1440px!important;
+  height:86px!important;
+  margin:0 auto!important;
+  padding:0 34px!important;
+  border:0!important;
+  box-shadow:none!important;
+  background:#fff!important;
+}
+.brand{font-size:28px!important;gap:12px!important;color:#071b45!important;font-weight:800!important}
+.brand-logo{width:58px!important;height:52px!important;background:transparent!important;padding:0!important}
+.nav nav{gap:34px!important}
+.nav nav a{font-size:14px!important;color:#071b45!important;font-weight:650!important}
+.nav .desktop-cta{
+  min-height:50px!important;
+  padding:0 26px!important;
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#1177a4,#0c8abb)!important;
+  color:#fff!important;
+  box-shadow:none!important;
+  white-space:nowrap!important;
+}
+
+.hero{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  min-height:665px!important;
+  width:100%!important;
+  overflow:hidden!important;
+  background-image:url("assets/kaybeevending-hero-desktop-no-text.png")!important;
+  background-position:center center!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+  isolation:isolate!important;
+}
+.hero::before,.hero::after{display:none!important}
+.hero-copy{
+  width:min(1440px,100%)!important;
+  max-width:1440px!important;
+  margin:0 auto!important;
+  padding:70px 54px 78px!important;
+  text-align:left!important;
+  align-items:flex-start!important;
+  position:relative!important;
+  z-index:2!important;
+}
+.hero .eyebrow{
+  margin:0 0 22px!important;
+  color:#2588b8!important;
+  font-size:15px!important;
+  line-height:1.2!important;
+  letter-spacing:.24em!important;
+  font-weight:650!important;
+}
+.hero-copy h1{
+  max-width:650px!important;
+  margin:0 0 24px!important;
+  color:#04153f!important;
+  font-size:clamp(54px,5.25vw,79px)!important;
+  line-height:1.08!important;
+  letter-spacing:-.045em!important;
+  font-weight:800!important;
+  white-space:normal!important;
+}
+.hero .lead{
+  max-width:620px!important;
+  margin:0!important;
+  color:#425f80!important;
+  font-size:21px!important;
+  line-height:1.55!important;
+  font-weight:400!important;
+}
+.hero .actions{
+  display:flex!important;
+  gap:18px!important;
+  margin-top:32px!important;
+  justify-content:flex-start!important;
+  align-items:center!important;
+}
+.hero .actions .btn,
+.hero .actions .text-link{
+  min-height:56px!important;
+  padding:0 28px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:16px!important;
+  border-radius:999px!important;
+  font-size:16px!important;
+  font-weight:700!important;
+  text-decoration:none!important;
+  opacity:1!important;
+}
+.hero .actions .btn{
+  background:linear-gradient(135deg,#1177a4,#0c8abb)!important;
+  color:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.hero .actions .text-link{
+  min-width:270px!important;
+  background:rgba(255,255,255,.88)!important;
+  color:#071b45!important;
+  border:2px solid #071b45!important;
+}
+.hero .actions .btn:hover,
+.hero .actions .text-link:hover{transform:translateY(-1px)!important;opacity:.92!important}
+
+.trust-band[hidden]{
+  display:grid!important;
+  grid-template-columns:repeat(3,1fr)!important;
+  max-width:840px!important;
+  margin:-96px auto 0!important;
+  padding:0!important;
+  position:relative!important;
+  z-index:5!important;
+  background:rgba(255,255,255,.95)!important;
+  border:0!important;
+}
+.trust-band .hero-benefit{
+  min-height:96px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:14px!important;
+  padding:16px 28px!important;
+  color:#04153f!important;
+  border:0!important;
+  border-right:1px solid #cad6e2!important;
+}
+.trust-band .hero-benefit:last-child{border-right:0!important}
+.hero-benefit svg{
+  width:44px!important;
+  height:44px!important;
+  flex:0 0 44px!important;
+  fill:none!important;
+  stroke:#0d7fae!important;
+  stroke-width:2.6!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+}
+.hero-benefit strong{
+  font-family:var(--font-heading)!important;
+  font-size:17px!important;
+  line-height:1.18!important;
+  text-align:center!important;
+}
+
+@media(max-width:1023px){
+  .nav{height:72px!important;padding:0 22px!important}
+  .brand{font-size:25px!important}
+  .brand-logo{width:52px!important;height:46px!important}
+  .menu{display:block!important;color:#061943!important;font-size:35px!important;line-height:1!important}
+  .nav nav{display:none!important}
+  .nav nav.open{
+    display:flex!important;
+    position:absolute!important;
+    top:72px!important;
+    left:0!important;
+    right:0!important;
+    z-index:30!important;
+    padding:20px 24px!important;
+    flex-direction:column!important;
+    background:#fff!important;
+    border-top:1px solid #e8eef4!important;
+    box-shadow:0 12px 28px rgba(7,27,69,.1)!important;
+  }
+  .desktop-cta{display:none!important}
+}
+
+@media(max-width:767px){
+  .hero{
+    min-height:980px!important;
+    align-items:flex-start!important;
+    background-image:url("assets/kaybeevending-hero-mobile-no-text.png")!important;
+    background-position:center top!important;
+    background-size:cover!important;
+  }
+  .hero-copy{
+    padding:115px 28px 34px!important;
+    text-align:left!important;
+    align-items:flex-start!important;
+  }
+  .hero .eyebrow{
+    margin-bottom:22px!important;
+    color:#2486b6!important;
+    font-size:13px!important;
+    letter-spacing:.22em!important;
+  }
+  .hero-copy h1{
+    max-width:9ch!important;
+    margin:0 0 20px!important;
+    color:#04153f!important;
+    font-size:clamp(48px,13.7vw,67px)!important;
+    line-height:1.08!important;
+    letter-spacing:-.045em!important;
+  }
+  .hero .lead{
+    max-width:17ch!important;
+    color:#425f80!important;
+    font-size:22px!important;
+    line-height:1.55!important;
+  }
+  .hero .actions{
+    position:absolute!important;
+    left:28px!important;
+    right:28px!important;
+    bottom:30px!important;
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+    margin:0!important;
+  }
+  .hero .actions .btn,
+  .hero .actions .text-link{
+    width:100%!important;
+    min-width:0!important;
+    min-height:60px!important;
+    padding:0 20px!important;
+    border-radius:999px!important;
+    font-size:17px!important;
+  }
+  .hero .actions .btn{
+    background:linear-gradient(135deg,#1177a4,#0c8abb)!important;
+    color:#fff!important;
+    border:0!important;
+  }
+  .hero .actions .text-link{
+    background:rgba(255,255,255,.94)!important;
+    color:#071b45!important;
+    border:2px solid #071b45!important;
+  }
+
+  .trust-band[hidden]{
+    display:grid!important;
+    grid-template-columns:repeat(3,1fr)!important;
+    max-width:none!important;
+    width:100%!important;
+    margin:0!important;
+    background:#fff!important;
+  }
+  .trust-band .hero-benefit{
+    min-height:120px!important;
+    gap:8px!important;
+    padding:16px 8px!important;
+    flex-direction:column!important;
+    border-right:1px solid #d3dde6!important;
+  }
+  .hero-benefit svg{width:42px!important;height:42px!important;flex-basis:42px!important}
+  .hero-benefit strong{font-size:14px!important}
+}
+
+@media(max-width:430px){
+  .nav{height:68px!important;padding:0 18px!important}
+  .brand{font-size:23px!important}
+  .brand-logo{width:48px!important;height:42px!important}
+  .hero{min-height:865px!important}
+  .hero-copy{padding:90px 22px 30px!important}
+  .hero-copy h1{font-size:clamp(43px,13vw,58px)!important}
+  .hero .lead{font-size:19px!important}
+  .hero .actions{left:20px!important;right:20px!important;bottom:24px!important}
+  .hero .actions .btn,.hero .actions .text-link{min-height:56px!important;font-size:16px!important}
+  .trust-band .hero-benefit{min-height:108px!important}
+  .hero-benefit strong{font-size:13px!important}
+}
