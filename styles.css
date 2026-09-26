@@ -7545,3 +7545,13 @@ footer strong{
 #solutions.intro + .benefits::after{
   background:#fff!important;
 }
+
+/* TRUST + SOLUTIONS + BENEFITS — one continuous monochromatic white band. */
+.trust-band,
+#solutions.intro,
+#solutions.intro + .benefits{
+  background:#fff!important;
+  box-shadow:0 0 0 100vmax #fff!important;
+  clip-path:inset(0 -100vmax)!important;
+}
+
