@@ -7771,3 +7771,85 @@ footer strong{
     padding:28px 20px!important;
   }
 }
+
+
+/* =========================================================
+   HERO BACKGROUND IMAGES — DESKTOP + PHONE
+   Uses dedicated no-text artwork so HTML copy/CTAs remain live.
+   ========================================================= */
+@media (min-width: 1024px) {
+  .hero{
+    background:url("assets/kaybeevending-hero-desktop-no-text.png") center center/cover no-repeat !important;
+    min-height:690px !important;
+  }
+  .hero::after{display:none !important;}
+  .hero-copy{
+    max-width:1180px !important;
+    width:100% !important;
+    align-items:flex-start !important;
+    text-align:left !important;
+  }
+  .hero .eyebrow{
+    color:var(--color-eyebrow) !important;
+  }
+  .hero-copy h1{
+    color:var(--color-heading) !important;
+    max-width:700px !important;
+  }
+  .hero .lead{
+    color:var(--color-text) !important;
+    max-width:640px !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+  .hero .actions{
+    justify-content:flex-start !important;
+  }
+  .hero .actions .btn{
+    background:var(--color-primary) !important;
+    color:var(--color-bg) !important;
+    border:1px solid var(--color-primary) !important;
+  }
+  .hero .actions .text-link{
+    color:var(--color-heading) !important;
+    border:1px solid var(--color-heading) !important;
+    border-radius:999px !important;
+    padding:13px 24px !important;
+    background:color-mix(in srgb,var(--color-bg) 78%,transparent) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero{
+    background:url("assets/kaybeevending-hero-mobile-no-text.png") center top/cover no-repeat !important;
+    min-height:760px !important;
+    align-items:center !important;
+  }
+  .hero::after{display:none !important;}
+  .hero-copy{
+    padding:30px 20px 34px !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+  }
+  .hero .eyebrow{
+    color:var(--color-eyebrow) !important;
+  }
+  .hero-copy h1{
+    color:var(--color-heading) !important;
+  }
+  .hero .lead{
+    color:var(--color-text) !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+  .hero .actions .btn{
+    background:var(--color-primary) !important;
+    color:var(--color-bg) !important;
+    border:1px solid var(--color-primary) !important;
+  }
+  .hero .actions .text-link{
+    background:color-mix(in srgb,var(--color-bg) 82%,transparent) !important;
+    color:var(--color-heading) !important;
+    border:1px solid var(--color-heading) !important;
+  }
+}
