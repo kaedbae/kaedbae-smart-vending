@@ -6664,3 +6664,29 @@ footer strong{
     transform:none!important;
   }
 }
+
+
+/* Mobile hero: use the same gym photo and dark overlay as desktop. */
+@media (max-width: 767px) {
+  .hero{
+    background:
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--color-footer) 93%, transparent) 0%,
+        color-mix(in srgb, var(--color-footer) 86%, transparent) 42%,
+        color-mix(in srgb, var(--color-footer) 32%, transparent) 68%,
+        color-mix(in srgb, var(--color-footer) 12%, transparent) 100%
+      ),
+      url("assets/gym-placement.png") 25% center / cover no-repeat!important;
+    background-attachment:scroll!important;
+  }
+
+  .hero::before{
+    content:none!important;
+    display:none!important;
+  }
+
+  .trust-band span{
+    color:var(--color-primary)!important;
+  }
+}
