@@ -3649,7 +3649,7 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
 @media (max-width: 767px) {
   :root{--kb-navy:var(--color-heading);--kb-cyan:var(--color-eyebrow);--kb-ink:var(--color-heading);--kb-muted:var(--color-text);--kb-paper:var(--color-bg-soft);--kb-line:var(--color-border);--kb-white:var(--color-bg);--kb-shadow:0 12px 32px color-mix(in srgb,var(--color-heading) 10%,transparent)}
   body{font-family:var(--font-body)!important;color:var(--kb-ink)!important}h1,h2,h3,.brand,.btn,.eyebrow{font-family:var(--font-heading)!important}.accent{color:var(--kb-cyan)!important}.eyebrow{color:var(--kb-cyan)!important}
-  .hero{position:relative!important;display:flex!important;align-items:flex-end!important;min-height:680px!important;overflow:hidden!important;isolation:isolate!important;background:linear-gradient(180deg,color-mix(in srgb, var(--color-footer) 10%, transparent) 0%,color-mix(in srgb, var(--color-footer) 38%, transparent) 42%,color-mix(in srgb, var(--color-footer) 96%, transparent) 78%,var(--color-footer) 100%),url("assets/58b66a32-cd3b-4688-997b-f3bd7b579930(1)%20(2).png") center 34%/cover no-repeat!important}
+  .hero{position:relative!important;display:flex!important;align-items:flex-end!important;min-height:680px!important;overflow:hidden!important;isolation:isolate!important;!important}
   .hero-copy{width:100%!important;margin:0!important;padding:44px 20px 38px!important;position:relative!important;z-index:1!important}.hero-copy h1{margin:0 0 18px!important;font-size:clamp(39px,11.5vw,54px)!important;line-height:1.02!important;letter-spacing:-.045em!important;color:var(--color-bg)!important}.hero-copy h1 br{display:none!important}.hero-copy h1 span{color:var(--color-bg)!important}.hero .eyebrow{color:var(--color-bg-soft)!important;font-size:10px!important;margin-bottom:12px!important}.hero .lead{color:color-mix(in srgb, var(--color-bg) 84%, transparent)!important;font-size:16px!important;line-height:1.55!important}
   .hero .actions{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;margin-top:23px!important}.hero .actions .btn,.hero .actions .text-link{width:100%!important;min-height:50px!important;border-radius:999px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 18px!important;font-size:14px!important;font-weight:700!important}.hero .actions .btn{background:var(--color-bg)!important;color:var(--kb-navy)!important;border:1px solid var(--color-bg)!important}.hero .actions .text-link{background:color-mix(in srgb, var(--color-bg) 6%, transparent)!important;color:var(--color-bg)!important;border:1px solid color-mix(in srgb, var(--color-bg) 58%, transparent)!important}
   .trust-band[hidden]{display:grid!important;grid-template-columns:1fr 1fr!important;background:var(--color-bg)!important;border-bottom:1px solid var(--kb-line)!important}.trust-band span{min-height:62px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:12px!important;text-align:center!important;color:var(--color-eyebrow)!important;font-size:11px!important;font-weight:700!important;border-right:1px solid var(--kb-line)!important;border-top:1px solid var(--kb-line)!important}
@@ -3970,18 +3970,6 @@ button,input,select,textarea{font-family:inherit}
     display:flex!important;
     align-items:flex-end!important;
     overflow:hidden!important;
-    background-image:
-      linear-gradient(180deg,
-        color-mix(in srgb, var(--color-footer) 16%, transparent) 0%,
-        color-mix(in srgb, var(--color-footer) 25%, transparent) 30%,
-        color-mix(in srgb, var(--color-footer) 62%, transparent) 58%,
-        color-mix(in srgb, var(--color-footer) 94%, transparent) 78%,
-        var(--color-footer) 100%),
-      url("assets/58b66a32-cd3b-4688-997b-f3bd7b579930(1)%20(2).png")!important;
-    background-size:cover!important;
-    background-position:center 30%!important;
-    background-repeat:no-repeat!important;
-    background-attachment:scroll!important;
     box-sizing:border-box!important;
   }
 
@@ -4032,7 +4020,6 @@ button,input,select,textarea{font-family:inherit}
     inset:0!important;
     z-index:1!important;
     pointer-events:none!important;
-    background:linear-gradient(180deg,transparent 0%,color-mix(in srgb, var(--color-footer) 5%, transparent) 35%,color-mix(in srgb, var(--color-footer) 30%, transparent) 58%,color-mix(in srgb, var(--color-footer) 54%, transparent) 100%)!important;
   }
 
   .hero + .trust-band{
@@ -4410,8 +4397,6 @@ button,input,select,textarea{font-family:inherit}
     margin:0!important;
     padding:0!important;
     overflow:hidden!important;
-    background:
-      linear-gradient(180deg,var(--color-primary) 0%,var(--color-footer) 52%,var(--color-footer) 100%)!important;
     /* Future photo:
        background:
          linear-gradient(180deg,color-mix(in srgb, var(--color-footer) 18%, transparent) 0%,color-mix(in srgb, var(--color-footer) 55%, transparent) 55%,color-mix(in srgb, var(--color-footer) 95%, transparent) 100%),
@@ -4700,20 +4685,6 @@ button,input,select,textarea{font-family:inherit}
     margin:0!important;
     padding:0!important;
     overflow:hidden!important;
-    background-image:
-      linear-gradient(
-        180deg,
-        color-mix(in srgb, var(--color-footer) 16%, transparent) 0%,
-        color-mix(in srgb, var(--color-footer) 28%, transparent) 34%,
-        color-mix(in srgb, var(--color-footer) 66%, transparent) 62%,
-        color-mix(in srgb, var(--color-footer) 94%, transparent) 82%,
-        var(--color-footer) 100%
-      ),
-      url("assets/58b66a32-cd3b-4688-997b-f3bd7b579930(1)%20(2).png")!important;
-    background-size:cover!important;
-    background-position:80% center!important;
-    background-repeat:no-repeat!important;
-    background-attachment:scroll!important;
   }
 
   .hero::before{
@@ -6618,24 +6589,6 @@ footer strong{
 
 /* Mobile hero: use the same gym photo and dark overlay as desktop. */
 @media (max-width: 767px) {
-  .hero{
-    background:
-      linear-gradient(
-        90deg,
-        color-mix(in srgb, var(--color-footer) 93%, transparent) 0%,
-        color-mix(in srgb, var(--color-footer) 86%, transparent) 42%,
-        color-mix(in srgb, var(--color-footer) 32%, transparent) 68%,
-        color-mix(in srgb, var(--color-footer) 12%, transparent) 100%
-      ),
-      url("assets/gym-placement.png") 25% center / cover no-repeat!important;
-    background-attachment:scroll!important;
-  }
-
-  .hero::before{
-    content:none!important;
-    display:none!important;
-  }
-
   .trust-band span{
     color:var(--color-primary)!important;
   }
@@ -7085,5 +7038,38 @@ footer strong{
 
   .product-showcase .gallery-arrow.next{
     right:10px!important;
+  }
+}
+
+
+/* Mobile hero background: desktop gym photo, single overlay. */
+@media (max-width: 767px) {
+  .hero {
+    position: relative!important;
+    background-image: url("assets/gym-placement.png")!important;
+    background-size: cover!important;
+    background-position: 18% center!important;
+    background-repeat: no-repeat!important;
+    background-attachment: scroll!important;
+  }
+
+  .hero::before {
+    content: ""!important;
+    display: block!important;
+    position: absolute!important;
+    inset: 0!important;
+    background: linear-gradient(
+      to bottom,
+      rgba(20, 35, 50, 0.25) 0%,
+      rgba(20, 35, 50, 0.55) 45%,
+      rgba(20, 35, 50, 0.85) 100%
+    )!important;
+    z-index: 0!important;
+    pointer-events: none!important;
+  }
+
+  .hero > * {
+    position: relative;
+    z-index: 1;
   }
 }
