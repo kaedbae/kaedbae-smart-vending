@@ -269,3 +269,145 @@
   .trust-band .hero-benefit{min-height:108px!important}
   .hero-benefit strong{font-size:13px!important}
 }
+
+/* Mobile correction after live-device review — preserve the reference composition,
+   keep copy clear of the machine, and prevent CTAs from covering body text. */
+@media (max-width:767px){
+  .nav{
+    position:sticky!important;
+    top:0!important;
+    z-index:100!important;
+    background:#fff!important;
+  }
+
+  .hero{
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:944 / 1298!important;
+    background-image:url("assets/kaybeevending-hero-mobile-no-text.png")!important;
+    background-size:100% 100%!important;
+    background-position:center top!important;
+    background-repeat:no-repeat!important;
+    overflow:hidden!important;
+  }
+
+  .hero-copy{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    height:100%!important;
+    margin:0!important;
+    padding:12.2% 5.5% 0!important;
+    box-sizing:border-box!important;
+    text-align:left!important;
+  }
+
+  .hero .eyebrow{
+    margin:0 0 3.2%!important;
+    color:#2588b8!important;
+    font-size:clamp(10px,2.15vw,15px)!important;
+    line-height:1.25!important;
+    letter-spacing:.20em!important;
+    font-weight:650!important;
+    white-space:nowrap!important;
+  }
+
+  .hero-copy h1{
+    width:53%!important;
+    max-width:53%!important;
+    margin:0 0 3.4%!important;
+    color:#04153f!important;
+    font-size:clamp(43px,7.8vw,60px)!important;
+    line-height:1.10!important;
+    letter-spacing:-.045em!important;
+    font-weight:800!important;
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+
+  .hero .lead{
+    width:52%!important;
+    max-width:52%!important;
+    margin:0!important;
+    color:#425f80!important;
+    font-size:clamp(15px,3.05vw,21px)!important;
+    line-height:1.48!important;
+    font-weight:400!important;
+  }
+
+  .hero .actions{
+    position:absolute!important;
+    left:9.5%!important;
+    right:9.5%!important;
+    bottom:3.0%!important;
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+    width:auto!important;
+    margin:0!important;
+    padding:0!important;
+  }
+
+  .hero .actions .btn,
+  .hero .actions .text-link{
+    width:100%!important;
+    min-width:0!important;
+    min-height:54px!important;
+    padding:0 18px!important;
+    border-radius:999px!important;
+    font-size:clamp(14px,2.7vw,18px)!important;
+    line-height:1.2!important;
+    font-weight:700!important;
+    box-sizing:border-box!important;
+  }
+
+  .hero .actions .btn{
+    background:linear-gradient(135deg,#1177a4,#0c8abb)!important;
+    color:#fff!important;
+    border:0!important;
+  }
+
+  .hero .actions .text-link{
+    background:rgba(255,255,255,.96)!important;
+    color:#071b45!important;
+    border:2px solid #071b45!important;
+  }
+
+  .trust-band[hidden]{
+    margin:0!important;
+  }
+}
+
+@media (max-width:430px){
+  .hero{
+    aspect-ratio:944 / 1335!important;
+  }
+  .hero-copy{
+    padding:11.5% 5.5% 0!important;
+  }
+  .hero-copy h1{
+    width:55%!important;
+    max-width:55%!important;
+    font-size:clamp(40px,11.6vw,50px)!important;
+    line-height:1.08!important;
+  }
+  .hero .lead{
+    width:52%!important;
+    max-width:52%!important;
+    font-size:clamp(14px,4.2vw,18px)!important;
+    line-height:1.45!important;
+  }
+  .hero .actions{
+    left:9%!important;
+    right:9%!important;
+    bottom:3.2%!important;
+  }
+  .hero .actions .btn,
+  .hero .actions .text-link{
+    min-height:52px!important;
+    font-size:15px!important;
+  }
+}
