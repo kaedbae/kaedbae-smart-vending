@@ -7578,3 +7578,21 @@ footer strong{
 #solutions.intro + .benefits{
   background:var(--color-bg)!important;
 }
+
+
+/* FEATURES — force the entire intro + benefits region to one continuous surface. */
+#solutions.intro{
+  background:#fff!important;
+  margin-bottom:0!important;
+}
+#solutions.intro + .benefits,
+#solutions.intro + .benefits.kb-card-grid{
+  background:#fff!important;
+  margin-top:0!important;
+}
+#solutions.intro::before,
+#solutions.intro::after,
+#solutions.intro + .benefits::before,
+#solutions.intro + .benefits::after{
+  background:#fff!important;
+}
