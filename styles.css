@@ -4210,3 +4210,45 @@ button,input,select,textarea{font-family:inherit}
     padding-bottom:12px!important;
   }
 }
+
+
+/* Hero copy sizing after headline update. */
+@media (min-width: 1024px) {
+  .hero-copy{
+    max-width:1240px!important;
+  }
+
+  .hero-copy h1{
+    max-width:none!important;
+    white-space:nowrap!important;
+    font-size:clamp(44px,4.1vw,62px)!important;
+    line-height:1.02!important;
+    letter-spacing:-.04em!important;
+  }
+
+  .hero .lead{
+    max-width:620px!important;
+    margin-top:0!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-copy h1{
+    max-width:11.5ch!important;
+    white-space:normal!important;
+    font-size:clamp(36px,10.2vw,48px)!important;
+    line-height:1.06!important;
+    letter-spacing:-.04em!important;
+    margin-bottom:18px!important;
+  }
+
+  .hero .lead{
+    margin-top:0!important;
+    margin-bottom:0!important;
+    line-height:1.58!important;
+  }
+
+  .hero .actions{
+    margin-top:24px!important;
+  }
+}
