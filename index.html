@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="hero-reference.css?v=20260926-04">
 <style id="hero-image-only-fix">
   .hero-image-only{
+    position:relative;
     display:block;
     width:100%;
     max-width:none;
@@ -29,12 +30,14 @@
     overflow:hidden;
     background:#fff;
   }
+
   .hero-image-only picture{
     display:block;
     width:100%;
     margin:0;
     padding:0;
   }
+
   .hero-image-only img{
     display:block;
     width:100%;
@@ -43,6 +46,52 @@
     margin:0;
     padding:0;
   }
+
+  .hero-image-buttons{
+    position:absolute;
+    left:4.8%;
+    bottom:12.5%;
+    display:flex;
+    gap:18px;
+    z-index:3;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+
+  .hero-overlay-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    min-height:58px;
+    padding:0 30px;
+    border-radius:999px;
+    font-family:Inter,sans-serif;
+    font-size:15px;
+    font-weight:700;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:transform .18s ease,opacity .18s ease;
+  }
+
+  .hero-overlay-btn:hover{
+    transform:translateY(-1px);
+    opacity:.94;
+  }
+
+  .hero-overlay-btn.primary{
+    background:linear-gradient(135deg,#1177a4,#0c8abb);
+    color:#fff;
+    border:0;
+    box-shadow:0 8px 24px rgba(17,119,164,.18);
+  }
+
+  .hero-overlay-btn.secondary{
+    background:rgba(255,255,255,.96);
+    color:#071b45;
+    border:2px solid #071b45;
+  }
+
   @media (max-width:700px){
     .hero-image-only,
     .hero-image-only picture,
@@ -50,6 +99,35 @@
       width:100%;
       max-width:none;
       height:auto;
+    }
+
+    .hero-image-buttons{
+      left:9.5%;
+      right:9.5%;
+      bottom:16.2%;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+
+    .hero-overlay-btn{
+      width:100%;
+      min-height:56px;
+      padding:0 20px;
+      font-size:16px;
+    }
+  }
+
+  @media (max-width:430px){
+    .hero-image-buttons{
+      left:8.5%;
+      right:8.5%;
+      bottom:16.5%;
+    }
+
+    .hero-overlay-btn{
+      min-height:54px;
+      font-size:15px;
     }
   }
 </style>
@@ -79,6 +157,15 @@
     <source media="(max-width: 700px)" srcset="assets/kaybee-vending-hero-phone.png">
     <img src="assets/kaybee-vending-hero-desktop.png" alt="Smart vending service for Metro Detroit businesses">
   </picture>
+
+  <div class="hero-image-buttons">
+    <a class="hero-overlay-btn primary" href="#contact">
+      Request a Free Evaluation <span aria-hidden="true">→</span>
+    </a>
+    <a class="hero-overlay-btn secondary" href="#how">
+      See how it works <span aria-hidden="true">→</span>
+    </a>
+  </div>
 </section>
 
 <section id="solutions" class="intro"><p class="eyebrow">VENDING SOLUTIONS FOR MODERN SPACES</p><h2>The convenience your space has been missing.</h2><p>KayBeeVending provides fully managed vending for qualifying Metro Detroit businesses and properties. We handle placement, installation, stocking, monitoring, and maintenance. Your employees, residents, customers, or guests get convenient access to food and drinks, without adding work for your staff.</p></section>
