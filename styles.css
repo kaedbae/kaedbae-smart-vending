@@ -7720,3 +7720,54 @@ footer strong{
     text-shadow: 0 1px 12px rgba(255,255,255,.65) !important;
   }
 }
+
+
+/* Final hero positioning: center hero content vertically on desktop and mobile.
+   Also restore the cleaner desktop image treatment from before the readability patch. */
+@media (min-width: 1024px) {
+  .hero{
+    display:flex!important;
+    align-items:center!important;
+  }
+
+  .hero::before{
+    background:linear-gradient(
+      90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.90) 30%,
+      rgba(255,255,255,.58) 48%,
+      rgba(255,255,255,.10) 65%,
+      rgba(255,255,255,0) 100%
+    )!important;
+  }
+
+  .hero-copy{
+    align-self:center!important;
+    padding-top:72px!important;
+    padding-bottom:72px!important;
+  }
+
+  .hero-copy h1{
+    max-width:760px!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    text-shadow:none!important;
+  }
+
+  .hero .lead{
+    text-shadow:none!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+
+  .hero-copy{
+    align-self:center!important;
+    padding:28px 20px!important;
+  }
+}
