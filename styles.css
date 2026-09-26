@@ -5173,3 +5173,165 @@ button,input,select,textarea{font-family:inherit}
     letter-spacing:0!important;
   }
 }
+
+
+/* =========================================================
+   SHARED CARD SYSTEM
+   One class system for Benefits, Placement, and Tap/Grab/Go.
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  .kb-card-grid{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    align-items:stretch!important;
+    gap:20px!important;
+    width:100%!important;
+    max-width:1180px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:0!important;
+  }
+
+  .benefits.kb-card-grid{
+    margin-top:0!important;
+    margin-bottom:var(--section-spacing)!important;
+  }
+
+  .kb-card{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-content:flex-start!important;
+    align-items:center!important;
+    column-gap:16px!important;
+    row-gap:0!important;
+    min-width:0!important;
+    height:100%!important;
+    padding:30px!important;
+    background:#fff!important;
+    border:1px solid var(--kb-line)!important;
+    border-radius:16px!important;
+    box-shadow:0 8px 28px rgba(21,56,74,.055)!important;
+    text-align:left!important;
+  }
+
+  .kb-card-badge{
+    display:inline-grid!important;
+    place-items:center!important;
+    flex:0 0 34px!important;
+    width:34px!important;
+    height:34px!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:50%!important;
+    background:#e8f7fa!important;
+    color:var(--kb-navy)!important;
+    font-family:var(--font-body)!important;
+    font-size:12px!important;
+    line-height:1!important;
+    font-weight:800!important;
+  }
+
+  .kb-card-title{
+    flex:1 1 calc(100% - 50px)!important;
+    min-width:0!important;
+    margin:0!important;
+    color:var(--kb-navy)!important;
+    font-family:var(--font-heading)!important;
+    font-size:22px!important;
+    line-height:1.22!important;
+    font-weight:700!important;
+    letter-spacing:-.018em!important;
+  }
+
+  .kb-card-text{
+    flex:0 0 100%!important;
+    width:100%!important;
+    margin:16px 0 0!important;
+    color:var(--kb-muted)!important;
+    font-family:var(--font-body)!important;
+    font-size:15px!important;
+    line-height:1.6!important;
+    font-weight:400!important;
+    letter-spacing:0!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .kb-card-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    align-items:stretch!important;
+    gap:12px!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:0!important;
+  }
+
+  .benefits.kb-card-grid{
+    width:calc(100% - 40px)!important;
+    margin-left:20px!important;
+    margin-right:20px!important;
+    margin-bottom:var(--section-spacing)!important;
+  }
+
+  .kb-card{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-content:flex-start!important;
+    align-items:center!important;
+    column-gap:14px!important;
+    row-gap:0!important;
+    min-width:0!important;
+    height:100%!important;
+    padding:22px!important;
+    background:#fff!important;
+    border:1px solid var(--kb-line)!important;
+    border-radius:14px!important;
+    box-shadow:0 6px 20px rgba(21,56,74,.045)!important;
+    text-align:left!important;
+  }
+
+  .kb-card-badge{
+    display:inline-grid!important;
+    place-items:center!important;
+    flex:0 0 32px!important;
+    width:32px!important;
+    height:32px!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:50%!important;
+    background:#e8f7fa!important;
+    color:var(--kb-navy)!important;
+    font-family:var(--font-body)!important;
+    font-size:11px!important;
+    line-height:1!important;
+    font-weight:800!important;
+  }
+
+  .kb-card-title{
+    flex:1 1 calc(100% - 46px)!important;
+    min-width:0!important;
+    margin:0!important;
+    color:var(--kb-navy)!important;
+    font-family:var(--font-heading)!important;
+    font-size:20px!important;
+    line-height:1.24!important;
+    font-weight:700!important;
+    letter-spacing:-.015em!important;
+  }
+
+  .kb-card-text{
+    flex:0 0 100%!important;
+    width:100%!important;
+    margin:14px 0 0!important;
+    color:var(--kb-muted)!important;
+    font-family:var(--font-body)!important;
+    font-size:14px!important;
+    line-height:1.55!important;
+    font-weight:400!important;
+    letter-spacing:0!important;
+  }
+}
