@@ -7596,10 +7596,3 @@ footer strong{
 #solutions.intro + .benefits::after{
   background:#fff!important;
 }
-
-/* TRUST + BENEFITS — background color only; no layout changes. */
-.trust-band,
-#solutions.intro,
-#solutions.intro + .benefits{
-  background-color:#fff!important;
-}
