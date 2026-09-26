@@ -19,6 +19,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20260926-hero5">
 <link rel="stylesheet" href="hero-reference.css?v=20260926-04">
+<style id="hero-image-only-fix">
+  .hero-image-only{
+    display:block;
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background:#fff;
+  }
+  .hero-image-only picture{
+    display:block;
+    width:100%;
+    margin:0;
+    padding:0;
+  }
+  .hero-image-only img{
+    display:block;
+    width:100%;
+    max-width:none;
+    height:auto;
+    margin:0;
+    padding:0;
+  }
+  @media (max-width:700px){
+    .hero-image-only,
+    .hero-image-only picture,
+    .hero-image-only img{
+      width:100%;
+      max-width:none;
+      height:auto;
+    }
+  }
+</style>
 </head>
 <body>
 <div class="contact-bar" aria-label="Contact KayBeeVending">
@@ -40,36 +74,10 @@
 <a class="btn small desktop-cta" href="#contact">Request a Free Evaluation →</a>
 </header>
 <main>
-<section class="hero hero-split">
-  <div class="hero-copy">
-    <p class="eyebrow">SMART VENDING FOR METRO DETROIT</p>
-    <h1>Vending Service for Your Business</h1>
-    <p class="lead">We place, stock, and maintain machines at your business, at no cost to qualifying locations.</p>
-
-    <div class="actions">
-      <a class="btn" href="#contact">Request a Free Evaluation <span aria-hidden="true">→</span></a>
-      <a class="text-link" href="#how">See how it works <span aria-hidden="true">→</span></a>
-    </div>
-
-    <div class="hero-benefits" aria-label="KayBeeVending service benefits">
-      <span class="hero-benefit">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="19" cy="13" rx="12" ry="5"/><path d="M7 13v8c0 3 5 5 12 5 2 0 4-.2 5.5-.7M7 21v8c0 3 5 5 12 5 1.4 0 2.8-.1 4-.4"/><circle cx="33" cy="31" r="10"/><path d="M33 25v12M36 28.5c-.8-1-2-1.5-3.4-1.5-1.9 0-3.1.9-3.1 2.3 0 3.8 7 1.7 7 5.4 0 1.5-1.4 2.6-3.5 2.6-1.6 0-3-.6-3.8-1.7"/></svg>
-        <strong>No<br>Capital Outlay</strong>
-      </span>
-      <span class="hero-benefit">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 5h8l1.5 5.2a16 16 0 0 1 4 2.3l5-1.5 4 7-3.8 3.8a16 16 0 0 1 0 4.6l3.8 3.8-4 7-5-1.5a16 16 0 0 1-4 2.3L28 43h-8l-1.5-5.2a16 16 0 0 1-4-2.3l-5 1.5-4-7 3.8-3.8a16 16 0 0 1 0-4.6L5.5 18l4-7 5 1.5a16 16 0 0 1 4-2.3L20 5Z"/><circle cx="24" cy="24" r="7"/></svg>
-        <strong>Managed<br>for You</strong>
-      </span>
-      <span class="hero-benefit">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44s14-13.1 14-25A14 14 0 1 0 10 19c0 11.9 14 25 14 25Z"/><circle cx="24" cy="19" r="5"/></svg>
-        <strong>Built Around<br>Your Location</strong>
-      </span>
-    </div>
-  </div>
-
-  <picture class="hero-photo">
+<section class="hero-image-only" aria-label="KayBeeVending smart vending service">
+  <picture>
     <source media="(max-width: 700px)" srcset="assets/kaybee-vending-hero-phone.png">
-    <img src="assets/kaybee-vending-hero-desktop.png" alt="Smart vending machine in a bright modern lounge">
+    <img src="assets/kaybee-vending-hero-desktop.png" alt="Smart vending service for Metro Detroit businesses">
   </picture>
 </section>
 
