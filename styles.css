@@ -7596,3 +7596,49 @@ footer strong{
 #solutions.intro + .benefits::after{
   background:#fff!important;
 }
+
+
+/* FULL-WIDTH BANDS — backgrounds span viewport; inner content remains centered. */
+.trust-band,
+#solutions.intro,
+#solutions.intro + .benefits{
+  position:relative!important;
+  width:100%!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+}
+
+/* Trust strip: extend its own background edge-to-edge even if legacy rules constrain it. */
+.trust-band::before{
+  content:""!important;
+  position:absolute!important;
+  z-index:-1!important;
+  top:0!important;
+  bottom:0!important;
+  left:50%!important;
+  width:100vw!important;
+  transform:translateX(-50%)!important;
+  background:inherit!important;
+}
+
+/* Solutions/cards band: one continuous full-viewport white surface. */
+#solutions.intro,
+#solutions.intro + .benefits{
+  background:#fff!important;
+}
+#solutions.intro::before,
+#solutions.intro + .benefits::before{
+  content:""!important;
+  position:absolute!important;
+  z-index:-1!important;
+  top:0!important;
+  bottom:0!important;
+  left:50%!important;
+  width:100vw!important;
+  transform:translateX(-50%)!important;
+  background:#fff!important;
+}
+
+html,body{
+  overflow-x:hidden;
+}
