@@ -7073,3 +7073,109 @@ footer strong{
     z-index: 1;
   }
 }
+
+
+/* Final carousel box cleanup: image + overlaid arrows only. */
+@media (min-width: 1024px) {
+  .product-showcase .gallery-stage,
+  .product-showcase .gallery-stage *{
+    background:transparent!important;
+  }
+
+  .product-showcase .gallery-stage{
+    padding:0!important;
+    margin:0!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    border-radius:16px!important;
+    overflow:hidden!important;
+    position:relative!important;
+  }
+
+  .product-showcase .gallery-stage>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:0!important;
+    transform:none!important;
+    transition:none!important;
+  }
+
+  .product-showcase .gallery-arrow.prev,
+  .product-showcase .gallery-arrow.next{
+    position:absolute!important;
+    top:50%!important;
+    bottom:auto!important;
+    transform:translateY(-50%)!important;
+    background:var(--color-bg)!important;
+    margin:0!important;
+  }
+
+  .product-showcase .gallery-arrow.prev{
+    left:12px!important;
+  }
+
+  .product-showcase .gallery-arrow.next{
+    right:12px!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-showcase .gallery-stage,
+  .product-showcase .gallery-stage *{
+    background:transparent!important;
+  }
+
+  .product-showcase .gallery-stage{
+    padding:0!important;
+    margin:0!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    border-radius:16px!important;
+    overflow:hidden!important;
+    position:relative!important;
+  }
+
+  .product-showcase .gallery-stage>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:0!important;
+    transform:none!important;
+    transition:none!important;
+  }
+
+  .product-showcase .gallery-arrow.prev,
+  .product-showcase .gallery-arrow.next{
+    position:absolute!important;
+    top:50%!important;
+    bottom:auto!important;
+    transform:translateY(-50%)!important;
+    background:var(--color-bg)!important;
+    margin:0!important;
+  }
+
+  .product-showcase .gallery-arrow.prev{
+    left:12px!important;
+  }
+
+  .product-showcase .gallery-arrow.next{
+    right:12px!important;
+  }
+}
