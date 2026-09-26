@@ -4252,3 +4252,409 @@ button,input,select,textarea{font-family:inherit}
     margin-top:24px!important;
   }
 }
+
+
+/* =========================================================
+   SCREENSHOT FIX PASS
+   Mobile-only unless explicitly separated below.
+   ========================================================= */
+
+/* [DESKTOP] Equipment carousel visual unification only */
+@media (min-width: 1024px) {
+  .product-showcase{
+    background:#235f7b!important;
+  }
+
+  .product-showcase .gallery-stage{
+    position:relative!important;
+    display:grid!important;
+    grid-template-rows:auto auto!important;
+    width:100%!important;
+    min-height:0!important;
+    padding:0 0 58px!important;
+    background:#0b0f14!important;
+    border:1px solid rgba(255,255,255,.34)!important;
+    border-radius:16px!important;
+    box-shadow:none!important;
+    overflow:visible!important;
+  }
+
+  .product-showcase .gallery-stage>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:16 / 10!important;
+    object-fit:contain!important;
+    background:#0b0f14!important;
+    border-radius:15px 15px 0 0!important;
+  }
+
+  .product-showcase .gallery-caption[hidden]{
+    display:block!important;
+    margin:0!important;
+    padding:15px 70px 16px!important;
+    color:#f5fbff!important;
+    background:#0b0f14!important;
+    border-top:1px solid rgba(255,255,255,.14)!important;
+    font-size:14px!important;
+    line-height:1.4!important;
+    font-weight:600!important;
+    text-align:center!important;
+  }
+
+  .product-showcase .gallery-arrow{
+    top:auto!important;
+    bottom:10px!important;
+    transform:none!important;
+    width:38px!important;
+    height:38px!important;
+    background:#f7fafb!important;
+    color:#17384b!important;
+    border:1px solid rgba(255,255,255,.45)!important;
+    box-shadow:none!important;
+  }
+
+  .product-showcase .gallery-arrow.prev{
+    left:calc(50% - 48px)!important;
+  }
+
+  .product-showcase .gallery-arrow.next{
+    right:calc(50% - 48px)!important;
+  }
+
+  .product-showcase .gallery-count{
+    right:18px!important;
+    bottom:17px!important;
+    background:transparent!important;
+    color:#f5fbff!important;
+    padding:0!important;
+  }
+
+  .product-showcase .gallery-thumbs{
+    gap:12px!important;
+  }
+
+  .product-showcase .gallery-thumb{
+    background:#0b0f14!important;
+    border:1px solid rgba(255,255,255,.22)!important;
+    border-radius:10px!important;
+    padding:4px!important;
+    opacity:.74!important;
+  }
+
+  .product-showcase .gallery-thumb img{
+    background:#0b0f14!important;
+    border-radius:7px!important;
+    object-fit:contain!important;
+  }
+
+  .product-showcase .gallery-thumb.active{
+    border-color:#dff7fb!important;
+    box-shadow:0 0 0 2px rgba(223,247,251,.25)!important;
+    opacity:1!important;
+  }
+}
+
+/* [MOBILE] Hero, header, footer, and carousel */
+@media (max-width: 767px) {
+  /* Restore a visible compact header instead of an empty white strip. */
+  .contact-bar{
+    display:none!important;
+  }
+
+  .nav{
+    position:relative!important;
+    top:auto!important;
+    display:flex!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:58px!important;
+    min-height:58px!important;
+    margin:0!important;
+    padding:0 16px!important;
+    align-items:center!important;
+    background:#fff!important;
+    border-bottom:1px solid rgba(21,56,74,.10)!important;
+    box-shadow:none!important;
+    z-index:20!important;
+  }
+
+  .nav .brand{
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+    color:var(--kb-navy)!important;
+    font-size:17px!important;
+    line-height:1!important;
+  }
+
+  .nav .brand-logo{
+    display:block!important;
+    width:40px!important;
+    height:36px!important;
+    object-fit:contain!important;
+  }
+
+  .nav .menu{
+    display:block!important;
+    margin-left:auto!important;
+    padding:6px!important;
+    color:var(--kb-navy)!important;
+    background:transparent!important;
+    border:0!important;
+    font-size:24px!important;
+    line-height:1!important;
+  }
+
+  .nav .desktop-cta{
+    display:none!important;
+  }
+
+  .nav nav{
+    top:58px!important;
+  }
+
+  main{
+    margin:0!important;
+    padding:0!important;
+  }
+
+  /* Navy fallback now. When assets/hero-mobile.jpg exists, uncomment the url layer. */
+  .hero{
+    width:100%!important;
+    max-width:100%!important;
+    min-height:610px!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+    background:
+      linear-gradient(180deg,#17384b 0%,#102f40 52%,#071c27 100%)!important;
+    /* Future photo:
+       background:
+         linear-gradient(180deg,rgba(7,28,39,.18) 0%,rgba(7,28,39,.55) 55%,rgba(7,28,39,.95) 100%),
+         url("assets/hero-mobile.jpg") center 38% / cover no-repeat!important;
+    */
+    background-attachment:scroll!important;
+    box-sizing:border-box!important;
+  }
+
+  .hero::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:1!important;
+    pointer-events:none!important;
+    background:linear-gradient(
+      180deg,
+      rgba(7,28,39,.05) 0%,
+      rgba(7,28,39,.18) 42%,
+      rgba(7,28,39,.50) 68%,
+      rgba(7,28,39,.76) 100%
+    )!important;
+  }
+
+  .hero-copy{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+    padding:48px 20px 34px!important;
+    box-sizing:border-box!important;
+    position:relative!important;
+    z-index:2!important;
+  }
+
+  .hero-copy h1{
+    max-width:100%!important;
+    font-size:clamp(34px,9.2vw,42px)!important;
+    line-height:1.04!important;
+    letter-spacing:-.035em!important;
+    white-space:normal!important;
+    text-wrap:balance!important;
+    margin:0 auto 20px!important;
+  }
+
+  .hero .lead{
+    max-width:31rem!important;
+    margin:0 auto!important;
+    line-height:1.58!important;
+    color:rgba(255,255,255,.92)!important;
+  }
+
+  .hero .actions{
+    margin-top:26px!important;
+    gap:10px!important;
+  }
+
+  /* Footer compaction */
+  .site-footer{
+    position:relative!important;
+    gap:22px!important;
+    padding:38px 20px 26px!important;
+  }
+
+  .footer-brand>span{
+    max-width:34rem!important;
+  }
+
+  .footer-nav{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:12px 24px!important;
+    width:100%!important;
+    margin:4px 0 0!important;
+  }
+
+  .footer-nav a{
+    text-align:left!important;
+    justify-self:start!important;
+  }
+
+  .footer-nav a[href="privacy.html"]{
+    position:absolute!important;
+    left:171px!important;
+    bottom:71px!important;
+    width:auto!important;
+    font-size:12px!important;
+    font-weight:500!important;
+    color:rgba(255,255,255,.62)!important;
+  }
+
+  .footer-nav a[href="privacy.html"]::before{
+    content:"· "!important;
+  }
+
+  .footer-bottom{
+    position:relative!important;
+    gap:14px!important;
+    padding-top:20px!important;
+    margin-top:4px!important;
+  }
+
+  .footer-bottom>span{
+    font-size:12px!important;
+    line-height:1.4!important;
+  }
+
+  .footer-bottom>a{
+    margin-top:18px!important;
+    font-size:13px!important;
+  }
+
+  /* Carousel: one brand blue section + near-black frame */
+  .product-showcase{
+    background:#235f7b!important;
+  }
+
+  .product-showcase .product-gallery{
+    gap:14px!important;
+  }
+
+  .product-showcase .gallery-stage{
+    position:relative!important;
+    display:grid!important;
+    grid-template-rows:auto auto!important;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:0 0 58px!important;
+    background:#0b0f14!important;
+    border:1px solid rgba(255,255,255,.42)!important;
+    border-radius:14px!important;
+    box-shadow:none!important;
+    overflow:visible!important;
+  }
+
+  .product-showcase .gallery-stage>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:1 / 1!important;
+    object-fit:contain!important;
+    background:#0b0f14!important;
+    border-radius:13px 13px 0 0!important;
+  }
+
+  .product-showcase .gallery-caption[hidden]{
+    display:block!important;
+    margin:0!important;
+    padding:12px 58px 13px!important;
+    color:#f5fbff!important;
+    background:#0b0f14!important;
+    border-top:1px solid rgba(255,255,255,.14)!important;
+    font-size:13px!important;
+    line-height:1.4!important;
+    font-weight:600!important;
+    text-align:center!important;
+  }
+
+  .product-showcase .gallery-arrow{
+    top:auto!important;
+    bottom:9px!important;
+    transform:none!important;
+    width:40px!important;
+    height:40px!important;
+    background:#f7fafb!important;
+    color:#17384b!important;
+    border:1px solid rgba(255,255,255,.45)!important;
+    box-shadow:none!important;
+    font-size:24px!important;
+  }
+
+  .product-showcase .gallery-arrow.prev{
+    left:calc(50% - 48px)!important;
+  }
+
+  .product-showcase .gallery-arrow.next{
+    right:calc(50% - 48px)!important;
+  }
+
+  .product-showcase .gallery-count{
+    right:14px!important;
+    bottom:18px!important;
+    padding:0!important;
+    background:transparent!important;
+    color:#f5fbff!important;
+    font-size:12px!important;
+  }
+
+  .product-showcase .gallery-thumbs{
+    display:flex!important;
+    flex-direction:row!important;
+    gap:8px!important;
+    overflow-x:auto!important;
+    padding:4px 2px 8px!important;
+    scrollbar-width:none!important;
+  }
+
+  .product-showcase .gallery-thumbs::-webkit-scrollbar{
+    display:none!important;
+  }
+
+  .product-showcase .gallery-thumb{
+    flex:0 0 72px!important;
+    width:72px!important;
+    height:72px!important;
+    min-width:72px!important;
+    min-height:72px!important;
+    padding:3px!important;
+    background:#0b0f14!important;
+    border:1px solid rgba(255,255,255,.22)!important;
+    border-radius:9px!important;
+    opacity:.72!important;
+  }
+
+  .product-showcase .gallery-thumb img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    background:#0b0f14!important;
+    border-radius:6px!important;
+  }
+
+  .product-showcase .gallery-thumb.active{
+    border-color:#e4fbff!important;
+    box-shadow:0 0 0 2px rgba(228,251,255,.26)!important;
+    opacity:1!important;
+  }
+}
