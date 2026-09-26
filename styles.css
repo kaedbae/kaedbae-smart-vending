@@ -5335,3 +5335,139 @@ button,input,select,textarea{font-family:inherit}
     letter-spacing:0!important;
   }
 }
+
+
+/* =========================================================
+   SHARED CARD SPECIFICITY FIX
+   Forces all three card groups to render identically.
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  .kb-card-grid > .kb-card{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    align-content:flex-start!important;
+    column-gap:16px!important;
+    row-gap:0!important;
+    height:100%!important;
+    min-width:0!important;
+    padding:30px!important;
+    background:#fff!important;
+    border:1px solid var(--kb-line)!important;
+    border-radius:16px!important;
+    box-shadow:0 8px 28px rgba(21,56,74,.055)!important;
+    text-align:left!important;
+  }
+
+  .kb-card-grid > .kb-card > .kb-card-badge{
+    display:inline-grid!important;
+    place-items:center!important;
+    flex:0 0 34px!important;
+    width:34px!important;
+    height:34px!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:50%!important;
+    background:#e8f7fa!important;
+    color:var(--kb-navy)!important;
+    font-family:var(--font-body)!important;
+    font-size:12px!important;
+    line-height:1!important;
+    font-weight:800!important;
+    letter-spacing:0!important;
+  }
+
+  .kb-card-grid > .kb-card > .kb-card-title{
+    display:block!important;
+    flex:1 1 calc(100% - 50px)!important;
+    min-width:0!important;
+    margin:0!important;
+    padding:0!important;
+    color:var(--kb-navy)!important;
+    font-family:var(--font-heading)!important;
+    font-size:22px!important;
+    line-height:1.22!important;
+    font-weight:700!important;
+    letter-spacing:-.018em!important;
+  }
+
+  .kb-card-grid > .kb-card > .kb-card-text{
+    display:block!important;
+    flex:0 0 100%!important;
+    width:100%!important;
+    margin:16px 0 0!important;
+    padding:0!important;
+    color:var(--kb-muted)!important;
+    font-family:var(--font-body)!important;
+    font-size:15px!important;
+    line-height:1.6!important;
+    font-weight:400!important;
+    letter-spacing:0!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .kb-card-grid > .kb-card{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    align-content:flex-start!important;
+    column-gap:14px!important;
+    row-gap:0!important;
+    height:100%!important;
+    min-width:0!important;
+    padding:22px!important;
+    background:#fff!important;
+    border:1px solid var(--kb-line)!important;
+    border-radius:14px!important;
+    box-shadow:0 6px 20px rgba(21,56,74,.045)!important;
+    text-align:left!important;
+  }
+
+  .kb-card-grid > .kb-card > .kb-card-badge{
+    display:inline-grid!important;
+    place-items:center!important;
+    flex:0 0 32px!important;
+    width:32px!important;
+    height:32px!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:50%!important;
+    background:#e8f7fa!important;
+    color:var(--kb-navy)!important;
+    font-family:var(--font-body)!important;
+    font-size:11px!important;
+    line-height:1!important;
+    font-weight:800!important;
+    letter-spacing:0!important;
+  }
+
+  .kb-card-grid > .kb-card > .kb-card-title{
+    display:block!important;
+    flex:1 1 calc(100% - 46px)!important;
+    min-width:0!important;
+    margin:0!important;
+    padding:0!important;
+    color:var(--kb-navy)!important;
+    font-family:var(--font-heading)!important;
+    font-size:20px!important;
+    line-height:1.24!important;
+    font-weight:700!important;
+    letter-spacing:-.015em!important;
+  }
+
+  .kb-card-grid > .kb-card > .kb-card-text{
+    display:block!important;
+    flex:0 0 100%!important;
+    width:100%!important;
+    margin:14px 0 0!important;
+    padding:0!important;
+    color:var(--kb-muted)!important;
+    font-family:var(--font-body)!important;
+    font-size:14px!important;
+    line-height:1.55!important;
+    font-weight:400!important;
+    letter-spacing:0!important;
+  }
+}
