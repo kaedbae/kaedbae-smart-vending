@@ -6982,3 +6982,81 @@ footer strong{
     background:var(--color-footer)!important;
   }
 }
+
+
+/* Carousel image containment: show the complete image above the caption bar. */
+@media (min-width: 1024px) {
+  .product-showcase .gallery-stage{
+    position:relative!important;
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    padding:0!important;
+    overflow:hidden!important;
+    cursor:default!important;
+  }
+
+  .product-showcase .gallery-stage>img,
+  .product-showcase .gallery-stage:hover>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:0!important;
+    transform:none!important;
+  }
+
+  .product-showcase .gallery-caption[hidden]{
+    position:relative!important;
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-showcase .gallery-stage{
+    position:relative!important;
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    padding:0!important;
+    overflow:hidden!important;
+    cursor:default!important;
+  }
+
+  .product-showcase .gallery-stage>img,
+  .product-showcase .gallery-stage:hover>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:0!important;
+    transform:none!important;
+  }
+
+  .product-showcase .gallery-caption[hidden]{
+    position:relative!important;
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+  }
+}
