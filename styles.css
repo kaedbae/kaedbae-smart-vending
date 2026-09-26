@@ -7555,3 +7555,139 @@ footer strong{
   clip-path:inset(0 -100vmax)!important;
 }
 
+
+
+/* =========================================================
+   FINAL RESPONSIVE HERO IMAGE
+   Uses dedicated no-text artwork for desktop and mobile.
+   ========================================================= */
+@media (min-width: 1024px) {
+  .hero{
+    position:relative!important;
+    display:flex!important;
+    align-items:center!important;
+    min-height:690px!important;
+    overflow:hidden!important;
+    isolation:isolate!important;
+    background-image:url("assets/kaybeevending-hero-desktop-no-text.png")!important;
+    background-size:cover!important;
+    background-position:center center!important;
+    background-repeat:no-repeat!important;
+  }
+
+  .hero::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:0!important;
+    pointer-events:none!important;
+    background:linear-gradient(
+      90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.90) 30%,
+      rgba(255,255,255,.58) 48%,
+      rgba(255,255,255,.10) 65%,
+      rgba(255,255,255,0) 100%
+    )!important;
+  }
+
+  .hero::after{
+    display:none!important;
+    content:none!important;
+  }
+
+  .hero-copy{
+    position:relative!important;
+    z-index:1!important;
+    width:min(1240px,100%)!important;
+    max-width:1240px!important;
+    margin:0 auto!important;
+    padding:104px 30px 108px!important;
+  }
+
+  .hero-copy h1{
+    max-width:700px!important;
+    color:var(--color-heading)!important;
+  }
+
+  .hero .eyebrow{
+    color:var(--color-eyebrow)!important;
+  }
+
+  .hero .lead{
+    max-width:590px!important;
+    color:var(--color-text)!important;
+  }
+
+  .hero .actions .btn{
+    background:var(--color-primary)!important;
+    color:var(--color-bg)!important;
+    border-color:var(--color-primary)!important;
+  }
+
+  .hero .actions .text-link{
+    background:rgba(255,255,255,.72)!important;
+    color:var(--color-heading)!important;
+    border-color:var(--color-heading)!important;
+    backdrop-filter:blur(4px)!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero{
+    position:relative!important;
+    min-height:max(680px,calc(100svh - 68px))!important;
+    background-image:url("assets/kaybeevending-hero-mobile-no-text.png")!important;
+    background-size:cover!important;
+    background-position:center center!important;
+    background-repeat:no-repeat!important;
+  }
+
+  .hero::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:0!important;
+    pointer-events:none!important;
+    background:linear-gradient(
+      to bottom,
+      rgba(255,255,255,.92) 0%,
+      rgba(255,255,255,.78) 42%,
+      rgba(255,255,255,.48) 63%,
+      rgba(255,255,255,.88) 100%
+    )!important;
+  }
+
+  .hero-copy{
+    position:relative!important;
+    z-index:1!important;
+    width:100%!important;
+    padding:48px 20px 34px!important;
+  }
+
+  .hero-copy h1{
+    color:var(--color-heading)!important;
+    text-shadow:none!important;
+  }
+
+  .hero .eyebrow{
+    color:var(--color-eyebrow)!important;
+  }
+
+  .hero .lead{
+    color:var(--color-text)!important;
+  }
+
+  .hero .actions .btn{
+    background:var(--color-primary)!important;
+    color:var(--color-bg)!important;
+    border-color:var(--color-primary)!important;
+  }
+
+  .hero .actions .text-link{
+    background:rgba(255,255,255,.82)!important;
+    color:var(--color-heading)!important;
+    border-color:var(--color-heading)!important;
+    backdrop-filter:blur(4px)!important;
+  }
+}
