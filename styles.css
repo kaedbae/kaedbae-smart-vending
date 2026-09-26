@@ -7375,3 +7375,98 @@ footer strong{
     transform:translateY(-50%)!important;
   }
 }
+
+/* Equipment carousel: compact caption row directly below image. */
+.product-showcase .gallery-stage{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  margin:0!important;
+  padding:0!important;
+  padding-bottom:0!important;
+  gap:0!important;
+  row-gap:0!important;
+  overflow:hidden!important;
+}
+
+.product-showcase .gallery-image-wrap{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+}
+
+.product-showcase .gallery-image-wrap>img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  margin:0!important;
+  padding:0!important;
+  transform:none!important;
+  transition:none!important;
+}
+
+.product-showcase .gallery-meta{
+  position:static!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:12px!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:12px 16px!important;
+  box-sizing:border-box!important;
+  background:var(--color-bg-accent)!important;
+}
+
+.product-showcase .gallery-caption,
+.product-showcase .gallery-count{
+  position:static!important;
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+}
+
+.product-showcase .gallery-caption{
+  color:var(--color-heading)!important;
+  text-align:left!important;
+}
+
+.product-showcase .gallery-count{
+  color:#6B7785!important;
+  text-align:right!important;
+  white-space:nowrap!important;
+}
+
+.product-showcase .gallery-image-wrap .gallery-arrow{
+  position:absolute!important;
+  top:50%!important;
+  bottom:auto!important;
+  transform:translateY(-50%)!important;
+  z-index:4!important;
+  margin:0!important;
+}
+
+.product-showcase .gallery-image-wrap .gallery-arrow.prev{
+  left:12px!important;
+}
+
+.product-showcase .gallery-image-wrap .gallery-arrow.next{
+  right:12px!important;
+}
