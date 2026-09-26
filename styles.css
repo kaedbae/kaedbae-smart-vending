@@ -7493,3 +7493,23 @@ footer strong{
 .product-showcase .gallery-image-wrap .gallery-arrow.next{
   right:12px!important;
 }
+
+
+/* Remove carousel container/card styling: image and metadata sit directly on section background. */
+.product-showcase .gallery-stage,
+.product-showcase .gallery-image-wrap,
+.product-showcase .gallery-meta{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+}
+
+.product-showcase .gallery-stage{
+  overflow:visible!important;
+}
+
+.product-showcase .gallery-meta{
+  padding:12px 0!important;
+}
