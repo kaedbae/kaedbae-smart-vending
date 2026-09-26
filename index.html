@@ -185,6 +185,30 @@
   }
 </style>
 
+<style id="phone-hero-final-crop">
+  @media (max-width:700px){
+    .hero-image-only{
+      height:auto !important;
+      max-height:none !important;
+      overflow:visible !important;
+    }
+    .hero-image-only picture{
+      display:block !important;
+      width:100% !important;
+      height:auto !important;
+      overflow:visible !important;
+    }
+    .hero-image-only picture img{
+      display:block !important;
+      width:100% !important;
+      height:auto !important;
+    }
+    .hero-image-buttons{
+      bottom:24px !important;
+    }
+  }
+</style>
+
 <style id="sticky-navigation">
   /* Keep the main navigation visible while scrolling on desktop and phone. */
   .nav{
@@ -225,7 +249,7 @@
 <main>
 <section class="hero-image-only" aria-label="KayBeeVending smart vending service">
   <picture>
-    <source media="(max-width: 700px)" srcset="assets/kaybee-vending-hero-phone.png">
+    <source media="(max-width: 700px)" srcset="assets/kaybee-vending-hero-phone.png?v=20260926-phonefix4">
     <img src="assets/kaybee-vending-hero-desktop.png" alt="Smart vending service for Metro Detroit businesses">
   </picture>
 
