@@ -5606,3 +5606,195 @@ button,input,select,textarea{font-family:inherit}
     object-position:center!important;
   }
 }
+
+
+/* =========================================================
+   CENTERED SECTION HEADERS + CONSISTENT INTER-SECTION RHYTHM
+   Requested gap is 80px desktop (40 + 40) and 48px mobile (24 + 24).
+   Card content remains left-aligned.
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  :root{
+    --section-edge-spacing:40px;
+  }
+
+  /* Normalize vertical space on content sections. Adjacent sections total 80px. */
+  .intro,
+  .benefits,
+  .placement-process,
+  .how,
+  .safe-checkout,
+  .product-showcase,
+  .faq-wrap,
+  .why-kaybee,
+  .about-kaybee,
+  .cta{
+    padding-top:var(--section-edge-spacing)!important;
+    padding-bottom:var(--section-edge-spacing)!important;
+    min-height:0!important;
+  }
+
+  /* Remove legacy margins that add to the section-to-section gap. */
+  .benefits.kb-card-grid{
+    margin-bottom:0!important;
+  }
+
+  .placement-heading{
+    margin-bottom:32px!important;
+  }
+
+  .placement-steps,
+  .steps{
+    margin-bottom:0!important;
+  }
+
+  /* All section header groups are centered. */
+  .intro,
+  .placement-heading,
+  .how,
+  .faq-heading,
+  .why-heading,
+  .about-kaybee,
+  .gallery-copy,
+  .cta>div,
+  .machine-section-heading,
+  .safe-checkout-rule{
+    text-align:center!important;
+  }
+
+  .intro .eyebrow,
+  .placement-heading .eyebrow,
+  .how>.eyebrow,
+  .faq-heading .eyebrow,
+  .why-heading .eyebrow,
+  .about-kaybee>.eyebrow,
+  .gallery-copy .eyebrow,
+  .cta .eyebrow,
+  .machine-section-heading .eyebrow,
+  .intro h2,
+  .placement-heading h2,
+  .how>h2,
+  .faq-heading h2,
+  .why-heading h2,
+  .about-kaybee h2,
+  .gallery-copy h2,
+  .cta h2,
+  .machine-section-heading h2,
+  .safe-checkout h2{
+    text-align:center!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  .intro>p:last-child,
+  .placement-heading>p:last-child,
+  .faq-heading>p:last-child,
+  .why-heading>p:last-child,
+  .gallery-copy>p:last-child,
+  .cta>div>p:not(.eyebrow),
+  .machine-section-heading>p:last-child{
+    max-width:720px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    text-align:center!important;
+  }
+
+  /* Card content is deliberately unaffected by centered section headers. */
+  .kb-card,
+  .kb-card-title,
+  .kb-card-text{
+    text-align:left!important;
+  }
+}
+
+@media (max-width: 767px) {
+  :root{
+    --section-edge-spacing:24px;
+  }
+
+  /* Normalize vertical space on content sections. Adjacent sections total 48px. */
+  .intro,
+  .benefits,
+  .placement-process,
+  .how,
+  .safe-checkout,
+  .product-showcase,
+  .faq-wrap,
+  .why-kaybee,
+  .about-kaybee,
+  .cta{
+    padding-top:var(--section-edge-spacing)!important;
+    padding-bottom:var(--section-edge-spacing)!important;
+    min-height:0!important;
+  }
+
+  .benefits.kb-card-grid{
+    margin-bottom:0!important;
+  }
+
+  .placement-heading{
+    margin-bottom:24px!important;
+  }
+
+  .placement-steps,
+  .steps{
+    margin-bottom:0!important;
+  }
+
+  .intro,
+  .placement-heading,
+  .how,
+  .faq-heading,
+  .why-heading,
+  .about-kaybee,
+  .gallery-copy,
+  .cta>div,
+  .machine-section-heading,
+  .safe-checkout-rule{
+    text-align:center!important;
+  }
+
+  .intro .eyebrow,
+  .placement-heading .eyebrow,
+  .how>.eyebrow,
+  .faq-heading .eyebrow,
+  .why-heading .eyebrow,
+  .about-kaybee>.eyebrow,
+  .gallery-copy .eyebrow,
+  .cta .eyebrow,
+  .machine-section-heading .eyebrow,
+  .intro h2,
+  .placement-heading h2,
+  .how>h2,
+  .faq-heading h2,
+  .why-heading h2,
+  .about-kaybee h2,
+  .gallery-copy h2,
+  .cta h2,
+  .machine-section-heading h2,
+  .safe-checkout h2{
+    text-align:center!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  .intro>p:last-child,
+  .placement-heading>p:last-child,
+  .faq-heading>p:last-child,
+  .why-heading>p:last-child,
+  .gallery-copy>p:last-child,
+  .cta>div>p:not(.eyebrow),
+  .machine-section-heading>p:last-child{
+    max-width:720px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    text-align:center!important;
+  }
+
+  .kb-card,
+  .kb-card-title,
+  .kb-card-text{
+    text-align:left!important;
+  }
+}
