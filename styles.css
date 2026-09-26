@@ -7597,7 +7597,9 @@ footer strong{
   background:#fff!important;
 }
 
-
-/* TRUST + BENEFITS BACKGROUND — one solid full-width band; layout unchanged. */
-.trust-band, #solutions.intro, #solutions.intro + .benefits{background:#fff!important;box-shadow:0 0 0 100vmax #fff!important;clip-path:inset(0 -100vmax)!important}
-
+/* TRUST + BENEFITS — background color only; no layout changes. */
+.trust-band,
+#solutions.intro,
+#solutions.intro + .benefits{
+  background-color:#fff!important;
+}
