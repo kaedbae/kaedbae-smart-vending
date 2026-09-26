@@ -7493,21 +7493,3 @@ footer strong{
 .product-showcase .gallery-image-wrap .gallery-arrow.next{
   right:12px!important;
 }
-
-
-/* Remove carousel caption/counter strip entirely. */
-.product-showcase .gallery-meta,
-.product-showcase .gallery-caption,
-.product-showcase .gallery-count{
-  display:none!important;
-}
-
-.product-showcase .gallery-stage{
-  background:transparent!important;
-  border-bottom-left-radius:0!important;
-  border-bottom-right-radius:0!important;
-}
-
-.product-showcase .gallery-image-wrap{
-  border-radius:inherit!important;
-}
