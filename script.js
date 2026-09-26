@@ -92,7 +92,6 @@ const galleryPrev = document.querySelector('.gallery-arrow.prev');
 const galleryNext = document.querySelector('.gallery-arrow.next');
 const galleryCount = document.querySelector('.gallery-count');
 const galleryCaption = document.getElementById('galleryCaption');
-const featureSlide = document.getElementById('featureSlide');
 const galleryItems = Array.from(document.querySelectorAll('.gallery-thumb'));
 
 let galleryIndex = Math.max(
@@ -115,13 +114,6 @@ function showGalleryImage(index) {
   item.classList.add('active');
   item.setAttribute('aria-selected', 'true');
 
-  const isFeatureSlide = galleryIndex === 0;
-
-  if (featureSlide) {
-    featureSlide.hidden = !isFeatureSlide;
-  }
-
-  galleryMain.hidden = isFeatureSlide;
   galleryMain.src = item.dataset.image;
   galleryMain.alt =
     item.dataset.alt || 'KayBeeVending smart vending machine';
