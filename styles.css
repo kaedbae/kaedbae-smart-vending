@@ -6208,7 +6208,7 @@ footer strong{
 @media (min-width: 1024px) {
   .trust-band{background:var(--color-bg-soft)!important;}
   .intro{background:var(--color-bg)!important;}
-  .benefits{background:var(--color-bg-soft)!important;}
+  .benefits{background:var(--color-bg)!important;}
   .machine-section{background:var(--color-bg)!important;}
   .placement-process{background:var(--color-bg-soft)!important;}
   .how{background:var(--color-bg)!important;}
@@ -6254,7 +6254,7 @@ footer strong{
 @media (max-width: 767px) {
   .trust-band{background:var(--color-bg-soft)!important;}
   .intro{background:var(--color-bg)!important;}
-  .benefits{background:var(--color-bg-soft)!important;}
+  .benefits{background:var(--color-bg)!important;}
   .machine-section{background:var(--color-bg)!important;}
   .placement-process{background:var(--color-bg-soft)!important;}
   .how{background:var(--color-bg)!important;}
