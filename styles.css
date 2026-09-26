@@ -7691,3 +7691,32 @@ footer strong{
     backdrop-filter:blur(4px)!important;
   }
 }
+
+
+/* Desktop hero readability fix */
+@media (min-width: 1024px) {
+  .hero::before{
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.93) 32%,
+      rgba(255,255,255,.78) 50%,
+      rgba(255,255,255,.42) 66%,
+      rgba(255,255,255,.10) 80%,
+      rgba(255,255,255,0) 100%
+    ) !important;
+  }
+
+  .hero-copy h1{
+    max-width: 980px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-shadow:
+      0 2px 18px rgba(255,255,255,.72),
+      0 0 1px rgba(255,255,255,.92) !important;
+  }
+
+  .hero .lead{
+    text-shadow: 0 1px 12px rgba(255,255,255,.65) !important;
+  }
+}
