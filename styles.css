@@ -5471,3 +5471,89 @@ button,input,select,textarea{font-family:inherit}
     letter-spacing:0!important;
   }
 }
+
+
+/* =========================================================
+   OFFICIAL PAYMENT MARK LAYOUT
+   SVG files are local official brand assets in /assets/payments/.
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  .safe-checkout{
+    padding-top:28px!important;
+    padding-bottom:54px!important;
+  }
+
+  .safe-checkout h2{
+    font-size:22px!important;
+    line-height:1.25!important;
+    font-weight:700!important;
+    letter-spacing:-.015em!important;
+    text-align:center!important;
+  }
+
+  .payment-methods-polished[hidden]{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:16px!important;
+    width:100%!important;
+    margin-top:22px!important;
+  }
+
+  .payment-methods-polished img{
+    display:block!important;
+    width:64px!important;
+    height:40px!important;
+    padding:7px 8px!important;
+    box-sizing:border-box!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
+    border:1px solid #d9dee2!important;
+    border-radius:6px!important;
+    opacity:1!important;
+    filter:none!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .safe-checkout{
+    padding-top:24px!important;
+    padding-bottom:38px!important;
+  }
+
+  .safe-checkout h2{
+    font-size:18px!important;
+    line-height:1.25!important;
+    font-weight:700!important;
+    letter-spacing:-.01em!important;
+    text-align:center!important;
+  }
+
+  .payment-methods-polished[hidden]{
+    display:grid!important;
+    grid-template-columns:repeat(3,52px)!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:10px!important;
+    width:100%!important;
+    margin-top:18px!important;
+  }
+
+  .payment-methods-polished img{
+    display:block!important;
+    width:52px!important;
+    height:32px!important;
+    padding:5px 6px!important;
+    box-sizing:border-box!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
+    border:1px solid #d9dee2!important;
+    border-radius:6px!important;
+    opacity:1!important;
+    filter:none!important;
+  }
+}
