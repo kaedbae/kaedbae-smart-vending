@@ -91,6 +91,7 @@ galleryStage?.addEventListener('mouseleave', () => {
 const galleryPrev = document.querySelector('.gallery-arrow.prev');
 const galleryNext = document.querySelector('.gallery-arrow.next');
 const galleryCount = document.querySelector('.gallery-count');
+const galleryCaption = document.getElementById('galleryCaption');
 const galleryItems = Array.from(document.querySelectorAll('.gallery-thumb'));
 
 let galleryIndex = Math.max(
@@ -119,6 +120,10 @@ function showGalleryImage(index) {
 
   galleryMain.style.transformOrigin = 'center center';
 
+  if (galleryCaption) {
+    galleryCaption.textContent = item.dataset.caption || item.dataset.alt || '';
+  }
+
   if (galleryCount) {
     galleryCount.textContent =
       `${galleryIndex + 1} / ${galleryItems.length}`;
@@ -134,6 +139,10 @@ function showGalleryImage(index) {
 galleryItems.forEach((item, index) =>
   item.addEventListener('click', () => {
     galleryIndex = index;
+
+    if (galleryCaption) {
+      galleryCaption.textContent = item.dataset.caption || item.dataset.alt || '';
+    }
 
     if (galleryCount) {
       galleryCount.textContent =
