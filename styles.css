@@ -6363,3 +6363,40 @@ footer strong{
     color:var(--color-eyebrow)!important;
   }
 }
+
+
+/* Center equipment section copy only. */
+@media (min-width: 1024px) {
+  .product-showcase .gallery-copy,
+  .product-showcase .gallery-copy .eyebrow,
+  .product-showcase .gallery-copy h2,
+  .product-showcase .gallery-copy p:last-child{
+    text-align:center!important;
+  }
+
+  .product-showcase .gallery-copy{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  .product-showcase .gallery-copy h2,
+  .product-showcase .gallery-copy p:last-child{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-showcase .gallery-copy,
+  .product-showcase .gallery-copy .eyebrow,
+  .product-showcase .gallery-copy h2,
+  .product-showcase .gallery-copy p:last-child{
+    text-align:center!important;
+  }
+
+  .product-showcase .gallery-copy h2,
+  .product-showcase .gallery-copy p:last-child{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
