@@ -7853,3 +7853,221 @@ footer strong{
     border:1px solid var(--color-heading) !important;
   }
 }
+
+
+/* === HERO SPLIT LAYOUT 2026-09-26 === */
+.hero.hero-split{
+  display:grid !important;
+  grid-template-columns:minmax(0,52%) minmax(0,48%) !important;
+  min-height:680px !important;
+  background:var(--color-bg-soft) !important;
+  color:var(--color-heading) !important;
+  overflow:hidden;
+}
+
+.hero.hero-split .hero-copy{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start !important;
+  text-align:left !important;
+  padding:72px clamp(38px,5vw,86px) 54px max(32px,calc((100vw - var(--max))/2)) !important;
+  background:var(--color-bg-soft) !important;
+  position:relative !important;
+  z-index:1;
+}
+
+.hero.hero-split .eyebrow{
+  color:var(--color-eyebrow) !important;
+  margin:0 0 20px !important;
+}
+
+.hero.hero-split h1{
+  color:var(--color-heading) !important;
+  font-size:clamp(52px,5.4vw,82px) !important;
+  line-height:.98 !important;
+  letter-spacing:-3.5px !important;
+  max-width:760px;
+  margin:0 0 24px !important;
+}
+
+.hero.hero-split .lead{
+  color:var(--color-text) !important;
+  font-size:clamp(18px,1.35vw,22px) !important;
+  line-height:1.5 !important;
+  max-width:650px;
+  margin:0 !important;
+}
+
+.hero.hero-split .actions{
+  display:flex !important;
+  flex-wrap:wrap;
+  gap:16px !important;
+  margin-top:32px !important;
+}
+
+.hero.hero-split .actions .btn,
+.hero.hero-split .actions .text-link{
+  min-height:56px;
+  padding:0 26px !important;
+  border-radius:999px !important;
+  font-weight:800 !important;
+  font-size:15px !important;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  white-space:nowrap;
+}
+
+.hero.hero-split .actions .btn{
+  background:var(--color-primary) !important;
+  color:var(--color-bg) !important;
+  border:1px solid var(--color-primary) !important;
+}
+
+.hero.hero-split .actions .text-link{
+  background:var(--color-bg) !important;
+  color:var(--color-heading) !important;
+  border:1.5px solid var(--color-heading) !important;
+}
+
+.hero-photo{
+  display:block;
+  min-width:0;
+  height:100%;
+  min-height:680px;
+  overflow:hidden;
+  background:var(--color-bg);
+}
+
+.hero-photo img{
+  width:100%;
+  height:100%;
+  min-height:680px;
+  object-fit:cover;
+  object-position:76% center;
+}
+
+.hero-benefits{
+  width:100%;
+  max-width:680px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:48px;
+  padding-top:26px;
+  border-top:1px solid var(--color-border);
+}
+
+.hero-benefit{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:8px;
+  text-align:center;
+  color:var(--color-heading);
+  padding:0 18px;
+}
+
+.hero-benefit + .hero-benefit{
+  border-left:1px solid var(--color-border);
+}
+
+.hero-benefit svg{
+  width:44px;
+  height:44px;
+  fill:none;
+  stroke:var(--color-primary);
+  stroke-width:2.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  flex:0 0 auto;
+}
+
+.hero-benefit strong{
+  font-size:14px;
+  line-height:1.18;
+}
+
+@media(max-width:900px){
+  .hero.hero-split{
+    grid-template-columns:1fr !important;
+    min-height:0 !important;
+  }
+
+  .hero-photo{
+    order:1;
+    min-height:0;
+    height:clamp(390px,62vw,560px);
+  }
+
+  .hero-photo img{
+    min-height:0;
+    height:100%;
+    object-position:center 43%;
+  }
+
+  .hero.hero-split .hero-copy{
+    order:2;
+    padding:42px 24px 34px !important;
+  }
+
+  .hero.hero-split h1{
+    font-size:clamp(42px,9vw,62px) !important;
+    letter-spacing:-2.5px !important;
+  }
+
+  .hero.hero-split .lead{
+    max-width:620px;
+  }
+
+  .hero-benefits{
+    margin-top:36px;
+  }
+}
+
+@media(max-width:560px){
+  .hero-photo{
+    height:500px;
+  }
+
+  .hero.hero-split .hero-copy{
+    padding:34px 22px 30px !important;
+  }
+
+  .hero.hero-split .actions{
+    width:100%;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:12px !important;
+    margin-top:28px !important;
+  }
+
+  .hero.hero-split .actions .btn,
+  .hero.hero-split .actions .text-link{
+    width:100%;
+    min-height:58px;
+  }
+
+  .hero-benefits{
+    margin-top:32px;
+    padding-top:22px;
+    gap:0;
+  }
+
+  .hero-benefit{
+    padding:0 8px;
+  }
+
+  .hero-benefit svg{
+    width:38px;
+    height:38px;
+  }
+
+  .hero-benefit strong{
+    font-size:12px;
+  }
+}
