@@ -6491,7 +6491,6 @@ footer strong{
   /* Full-bleed color without changing the section/content width. */
   .trust-band{
     background:var(--color-bg-soft)!important;
-    box-shadow:0 0 0 100vmax var(--color-bg-soft)!important;
     clip-path:inset(0 -100vmax)!important;
   }
 
@@ -6503,7 +6502,6 @@ footer strong{
 
   .benefits{
     background:var(--color-bg-soft)!important;
-    box-shadow:0 0 0 100vmax var(--color-bg-soft)!important;
     clip-path:inset(0 -100vmax)!important;
   }
 
