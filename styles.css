@@ -6400,3 +6400,119 @@ footer strong{
     margin-right:auto!important;
   }
 }
+
+
+/* =========================================================
+   FULL-BLEED SECTION BACKGROUNDS ONLY
+   Keeps each section's existing content width unchanged.
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  .trust-band,
+  .intro,
+  .benefits,
+  .machine-section,
+  .placement-process,
+  .how,
+  .safe-checkout,
+  .product-showcase,
+  .faq-wrap,
+  .why-kaybee,
+  .about-kaybee,
+  .cta{
+    position:relative!important;
+    isolation:isolate!important;
+    background:transparent!important;
+  }
+
+  .trust-band::before,
+  .intro::before,
+  .benefits::before,
+  .machine-section::before,
+  .placement-process::before,
+  .how::before,
+  .safe-checkout::before,
+  .product-showcase::before,
+  .faq-wrap::before,
+  .why-kaybee::before,
+  .about-kaybee::before,
+  .cta::before{
+    content:""!important;
+    position:absolute!important;
+    top:0!important;
+    bottom:0!important;
+    left:50%!important;
+    width:100vw!important;
+    transform:translateX(-50%)!important;
+    z-index:-1!important;
+    pointer-events:none!important;
+  }
+
+  .trust-band::before{background:var(--color-bg-soft)!important;}
+  .intro::before{background:var(--color-bg)!important;}
+  .benefits::before{background:var(--color-bg-soft)!important;}
+  .machine-section::before{background:var(--color-bg)!important;}
+  .placement-process::before{background:var(--color-bg-soft)!important;}
+  .how::before{background:var(--color-bg)!important;}
+  .safe-checkout::before{background:var(--color-bg-soft)!important;}
+  .product-showcase::before{background:var(--color-bg-accent)!important;}
+  .faq-wrap::before{background:var(--color-bg)!important;}
+  .why-kaybee::before{background:var(--color-bg-soft)!important;}
+  .about-kaybee::before{background:var(--color-bg)!important;}
+  .cta::before{background:var(--color-bg-accent)!important;}
+}
+
+@media (max-width: 767px) {
+  .trust-band,
+  .intro,
+  .benefits,
+  .machine-section,
+  .placement-process,
+  .how,
+  .safe-checkout,
+  .product-showcase,
+  .faq-wrap,
+  .why-kaybee,
+  .about-kaybee,
+  .cta{
+    position:relative!important;
+    isolation:isolate!important;
+    background:transparent!important;
+  }
+
+  .trust-band::before,
+  .intro::before,
+  .benefits::before,
+  .machine-section::before,
+  .placement-process::before,
+  .how::before,
+  .safe-checkout::before,
+  .product-showcase::before,
+  .faq-wrap::before,
+  .why-kaybee::before,
+  .about-kaybee::before,
+  .cta::before{
+    content:""!important;
+    position:absolute!important;
+    top:0!important;
+    bottom:0!important;
+    left:50%!important;
+    width:100vw!important;
+    transform:translateX(-50%)!important;
+    z-index:-1!important;
+    pointer-events:none!important;
+  }
+
+  .trust-band::before{background:var(--color-bg-soft)!important;}
+  .intro::before{background:var(--color-bg)!important;}
+  .benefits::before{background:var(--color-bg-soft)!important;}
+  .machine-section::before{background:var(--color-bg)!important;}
+  .placement-process::before{background:var(--color-bg-soft)!important;}
+  .how::before{background:var(--color-bg)!important;}
+  .safe-checkout::before{background:var(--color-bg-soft)!important;}
+  .product-showcase::before{background:var(--color-bg-accent)!important;}
+  .faq-wrap::before{background:var(--color-bg)!important;}
+  .why-kaybee::before{background:var(--color-bg-soft)!important;}
+  .about-kaybee::before{background:var(--color-bg)!important;}
+  .cta::before{background:var(--color-bg-accent)!important;}
+}
