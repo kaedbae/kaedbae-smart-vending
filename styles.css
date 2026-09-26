@@ -5557,3 +5557,52 @@ button,input,select,textarea{font-family:inherit}
     filter:none!important;
   }
 }
+
+
+/* =========================================================
+   PAYMENT LOGO SIZE / WRAPPER CLEANUP
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  .payment-methods-polished[hidden]{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:24px!important;
+  }
+
+  .payment-methods-polished img{
+    display:block!important;
+    width:auto!important;
+    height:56px!important;
+    padding:0!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .payment-methods-polished[hidden]{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:16px!important;
+  }
+
+  .payment-methods-polished img{
+    display:block!important;
+    width:auto!important;
+    height:40px!important;
+    padding:0!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+}
