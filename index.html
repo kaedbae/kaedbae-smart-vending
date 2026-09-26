@@ -164,6 +164,24 @@
     }
   }
 </style>
+
+<style id="sticky-navigation">
+  /* Keep the main navigation visible while scrolling on desktop and phone. */
+  .nav{
+    position:sticky !important;
+    top:0 !important;
+    z-index:5000 !important;
+    background:#fff !important;
+  }
+
+  @media (max-width:700px){
+    .nav{
+      position:sticky !important;
+      top:0 !important;
+      z-index:5000 !important;
+    }
+  }
+</style>
 </head>
 <body>
 <div class="contact-bar" aria-label="Contact KayBeeVending">
