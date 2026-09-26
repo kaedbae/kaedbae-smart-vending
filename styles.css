@@ -7495,23 +7495,6 @@ footer strong{
 }
 
 
-/* Remove carousel caption/counter strip entirely. */
-.product-showcase .gallery-meta,
-.product-showcase .gallery-caption,
-.product-showcase .gallery-count{
-  display:none!important;
-}
-
-.product-showcase .gallery-stage{
-  background:transparent!important;
-  border-bottom-left-radius:0!important;
-  border-bottom-right-radius:0!important;
-}
-
-.product-showcase .gallery-image-wrap{
-  border-radius:inherit!important;
-}
-
 
 /* 2026-09-26 hero refresh: brighter, calmer, responsive on mobile + desktop */
 .hero{
@@ -7663,4 +7646,123 @@ footer strong{
   .hero{min-height:620px!important}
   .hero-copy{padding-left:16px!important;padding-right:16px!important}
   .hero-copy h1{font-size:39px!important}
+}
+
+
+/* Smart cooler feature slide: no dark outer card or inner feature boxes. */
+.product-showcase .feature-slide{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr)!important;
+  align-items:center!important;
+  gap:28px!important;
+  width:100%!important;
+  box-sizing:border-box!important;
+  padding:28px 30px!important;
+  margin:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  color:var(--color-heading)!important;
+}
+
+.product-showcase .feature-slide[hidden]{
+  display:none!important;
+}
+
+.product-showcase .feature-slide-copy{
+  min-width:0!important;
+}
+
+.product-showcase .feature-slide h3{
+  margin:0 0 24px!important;
+  color:var(--color-heading)!important;
+  font-size:clamp(30px,3.2vw,54px)!important;
+  line-height:1.03!important;
+  letter-spacing:-.03em!important;
+}
+
+.product-showcase .feature-list{
+  display:grid!important;
+  gap:0!important;
+}
+
+.product-showcase .feature-row{
+  display:grid!important;
+  grid-template-columns:42px minmax(0,1fr)!important;
+  gap:12px!important;
+  align-items:start!important;
+  padding:16px 0!important;
+  margin:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+
+.product-showcase .feature-row + .feature-row{
+  border-top:1px solid color-mix(in srgb, var(--color-heading) 14%, transparent)!important;
+}
+
+.product-showcase .feature-icon{
+  color:#E8B400!important;
+  font-size:30px!important;
+  line-height:1!important;
+  font-weight:700!important;
+}
+
+.product-showcase .feature-row h4{
+  margin:0 0 6px!important;
+  color:var(--color-heading)!important;
+  font-size:clamp(18px,1.45vw,24px)!important;
+  line-height:1.15!important;
+}
+
+.product-showcase .feature-row p{
+  margin:0!important;
+  color:var(--color-text)!important;
+  font-size:clamp(13px,1vw,16px)!important;
+  line-height:1.5!important;
+}
+
+.product-showcase .feature-machine{
+  display:block!important;
+  width:100%!important;
+  max-height:620px!important;
+  object-fit:contain!important;
+  justify-self:center!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+.product-showcase .gallery-image-wrap{
+  background:transparent!important;
+}
+
+.product-showcase .gallery-meta{
+  display:flex!important;
+}
+
+@media (max-width:767px){
+  .product-showcase .feature-slide{
+    grid-template-columns:1fr!important;
+    gap:18px!important;
+    padding:20px 16px!important;
+  }
+
+  .product-showcase .feature-machine{
+    max-height:360px!important;
+    width:min(58%,260px)!important;
+  }
+
+  .product-showcase .feature-row{
+    grid-template-columns:34px minmax(0,1fr)!important;
+    gap:10px!important;
+    padding:13px 0!important;
+  }
+
+  .product-showcase .feature-icon{
+    font-size:24px!important;
+  }
 }
