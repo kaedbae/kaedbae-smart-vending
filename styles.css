@@ -6496,8 +6496,8 @@ footer strong{
   }
 
   .intro{
-    background:var(--color-bg)!important;
-    box-shadow:0 0 0 100vmax var(--color-bg)!important;
+    background:var(--color-bg-soft)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg-soft)!important;
     clip-path:inset(0 -100vmax)!important;
   }
 
