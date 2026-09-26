@@ -4057,3 +4057,156 @@ button,input,select,textarea{font-family:inherit}
     margin-top:0!important;
   }
 }
+
+
+/* =========================================================
+   FAQ ACCORDION POLISH
+   Desktop and mobile values are intentionally separate.
+   Tablet 768–1023px remains unchanged.
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  .faq details{
+    padding:0!important;
+    overflow:hidden!important;
+  }
+
+  .faq summary{
+    position:relative!important;
+    display:flex!important;
+    align-items:center!important;
+    width:100%!important;
+    padding:24px 64px 24px 28px!important;
+    margin:0!important;
+    list-style:none!important;
+    cursor:pointer!important;
+    box-sizing:border-box!important;
+    font-family:var(--font-body)!important;
+    transition:background-color .18s ease!important;
+  }
+
+  .faq summary::-webkit-details-marker{
+    display:none!important;
+  }
+
+  .faq summary::marker{
+    content:""!important;
+  }
+
+  .faq summary::after{
+    content:"+"!important;
+    position:absolute!important;
+    right:28px!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    display:grid!important;
+    place-items:center!important;
+    width:28px!important;
+    height:28px!important;
+    border-radius:50%!important;
+    border:1px solid var(--kb-line)!important;
+    color:var(--kb-navy)!important;
+    background:#fff!important;
+    font-family:var(--font-body)!important;
+    font-size:18px!important;
+    line-height:1!important;
+    font-weight:600!important;
+    transition:transform .18s ease,background-color .18s ease,border-color .18s ease!important;
+  }
+
+  .faq summary:hover{
+    background:#f8fbfc!important;
+  }
+
+  .faq summary:hover::after{
+    background:#eef8fa!important;
+    border-color:#c7e5eb!important;
+  }
+
+  .faq details[open] summary::after{
+    content:"−"!important;
+  }
+
+  .faq details p{
+    margin:0!important;
+    padding:0 28px 24px!important;
+    box-sizing:border-box!important;
+  }
+
+  .faq details[open] summary{
+    padding-bottom:12px!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq details{
+    padding:0!important;
+    overflow:hidden!important;
+  }
+
+  .faq summary{
+    position:relative!important;
+    display:flex!important;
+    align-items:center!important;
+    width:100%!important;
+    padding:18px 54px 18px 20px!important;
+    margin:0!important;
+    list-style:none!important;
+    cursor:pointer!important;
+    box-sizing:border-box!important;
+    font-family:var(--font-body)!important;
+    transition:background-color .18s ease!important;
+  }
+
+  .faq summary::-webkit-details-marker{
+    display:none!important;
+  }
+
+  .faq summary::marker{
+    content:""!important;
+  }
+
+  .faq summary::after{
+    content:"+"!important;
+    position:absolute!important;
+    right:20px!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    display:grid!important;
+    place-items:center!important;
+    width:26px!important;
+    height:26px!important;
+    border-radius:50%!important;
+    border:1px solid var(--kb-line)!important;
+    color:var(--kb-navy)!important;
+    background:#fff!important;
+    font-family:var(--font-body)!important;
+    font-size:17px!important;
+    line-height:1!important;
+    font-weight:600!important;
+    transition:background-color .18s ease,border-color .18s ease!important;
+  }
+
+  .faq summary:hover{
+    background:#f8fbfc!important;
+  }
+
+  .faq summary:hover::after{
+    background:#eef8fa!important;
+    border-color:#c7e5eb!important;
+  }
+
+  .faq details[open] summary::after{
+    content:"−"!important;
+  }
+
+  .faq details p{
+    margin:0!important;
+    padding:0 20px 18px!important;
+    box-sizing:border-box!important;
+  }
+
+  .faq details[open] summary{
+    padding-bottom:12px!important;
+  }
+}
