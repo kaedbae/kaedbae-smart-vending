@@ -6898,3 +6898,87 @@ footer strong{
     white-space:nowrap!important;
   }
 }
+
+
+/* Carousel image + caption bar: zero internal gap on every slide. */
+@media (min-width: 1024px) {
+  .product-showcase .gallery-stage{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    padding:0!important;
+    margin:0!important;
+    row-gap:0!important;
+    gap:0!important;
+    background:transparent!important;
+    overflow:hidden!important;
+  }
+
+  .product-showcase .gallery-stage>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    vertical-align:top!important;
+  }
+
+  .product-showcase .gallery-caption[hidden]{
+    display:block!important;
+    position:static!important;
+    width:100%!important;
+    margin:0!important;
+    border-radius:0!important;
+    background:var(--color-footer)!important;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-showcase .gallery-stage{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    padding:0!important;
+    margin:0!important;
+    row-gap:0!important;
+    gap:0!important;
+    background:transparent!important;
+    overflow:hidden!important;
+  }
+
+  .product-showcase .gallery-stage>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    vertical-align:top!important;
+  }
+
+  .product-showcase .gallery-caption[hidden]{
+    display:block!important;
+    position:static!important;
+    width:100%!important;
+    margin:0!important;
+    border-radius:0!important;
+    background:var(--color-footer)!important;
+  }
+}
