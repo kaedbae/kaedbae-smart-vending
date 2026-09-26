@@ -7571,3 +7571,10 @@ footer strong{
     height:auto!important;
   }
 }
+
+
+/* FEATURES — keep intro and benefit cards on one continuous background. */
+#solutions.intro,
+#solutions.intro + .benefits{
+  background:var(--color-bg)!important;
+}
