@@ -7601,5 +7601,5 @@ footer strong{
 .trust-band,
 #solutions.intro,
 #solutions.intro + .benefits{
-  background-color:var(--color-bg-soft)!important;
+  background-color:#fff!important;
 }
