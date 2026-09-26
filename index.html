@@ -187,25 +187,36 @@
 
 <style id="phone-hero-final-crop">
   @media (max-width:700px){
+    /* Fit the complete hero presentation into the initial phone viewport. */
     .hero-image-only{
-      height:auto !important;
-      max-height:none !important;
-      overflow:visible !important;
+      height:calc(100svh - 68px) !important;
+      min-height:0 !important;
+      max-height:calc(100svh - 68px) !important;
+      overflow:hidden !important;
+      position:relative !important;
     }
     .hero-image-only picture{
       display:block !important;
       width:100% !important;
-      height:auto !important;
-      overflow:visible !important;
+      height:100% !important;
+      overflow:hidden !important;
     }
     .hero-image-only picture img{
       display:block !important;
       width:100% !important;
-      height:auto !important;
+      height:100% !important;
+      max-width:none !important;
+      object-fit:cover !important;
+      object-position:center 58% !important;
     }
     .hero-image-buttons{
-      /* Keep both CTAs visible in the initial phone viewport. */
-      bottom:20% !important;
+      left:8.5% !important;
+      right:8.5% !important;
+      bottom:3.5% !important;
+      gap:10px !important;
+    }
+    .hero-overlay-btn{
+      min-height:50px !important;
     }
   }
 </style>
