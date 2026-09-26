@@ -411,3 +411,48 @@
     font-size:15px!important;
   }
 }
+
+
+/* FINAL HERO ASSET MODE */
+.hero{
+  display:block!important;
+  width:100%!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:0!important;
+  margin:0!important;
+  background:none!important;
+  overflow:hidden!important;
+}
+.hero-copy{
+  display:none!important;
+}
+.hero-photo{
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+}
+.hero-photo img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  object-fit:contain!important;
+}
+@media(max-width:767px){
+  .hero{
+    aspect-ratio:auto!important;
+    min-height:0!important;
+    height:auto!important;
+    background:none!important;
+  }
+  .hero-photo{
+    width:100%!important;
+  }
+  .hero-photo img{
+    width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+  }
+}
