@@ -6516,3 +6516,151 @@ footer strong{
   .about-kaybee::before{background:var(--color-bg)!important;}
   .cta::before{background:var(--color-bg-accent)!important;}
 }
+
+
+/* =========================================================
+   DESKTOP FULL-BLEED BACKGROUND / FLOW FIX
+   Removes the 100vw pseudo-element overflow that shifted the page.
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  html,
+  body{
+    width:100%!important;
+    max-width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    overflow-x:clip!important;
+  }
+
+  main{
+    width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  /* Disable the previous 100vw full-bleed layers. */
+  .trust-band::before,
+  .intro::before,
+  .benefits::before,
+  .machine-section::before,
+  .placement-process::before,
+  .how::before,
+  .safe-checkout::before,
+  .product-showcase::before,
+  .faq-wrap::before,
+  .why-kaybee::before,
+  .about-kaybee::before,
+  .cta::before{
+    content:none!important;
+    display:none!important;
+  }
+
+  /* Full-bleed color without changing the section/content width. */
+  .trust-band{
+    background:var(--color-bg-soft)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg-soft)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .intro{
+    background:var(--color-bg)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .benefits{
+    background:var(--color-bg-soft)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg-soft)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .machine-section{
+    background:var(--color-bg)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .placement-process{
+    background:var(--color-bg-soft)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg-soft)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .how{
+    background:var(--color-bg)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .safe-checkout{
+    background:var(--color-bg-soft)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg-soft)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .product-showcase{
+    background:var(--color-bg-accent)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg-accent)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .faq-wrap{
+    background:var(--color-bg)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .why-kaybee{
+    background:var(--color-bg-soft)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg-soft)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .about-kaybee{
+    background:var(--color-bg)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  .cta{
+    background:var(--color-bg-accent)!important;
+    box-shadow:0 0 0 100vmax var(--color-bg-accent)!important;
+    clip-path:inset(0 -100vmax)!important;
+  }
+
+  /* Restore the integrated product spotlight to normal document flow. */
+  #machine.machine-integrated{
+    position:relative!important;
+    display:flex!important;
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+
+  #machine .machine-integrated-picture{
+    position:static!important;
+    display:block!important;
+    width:100%!important;
+    max-width:1920px!important;
+    margin:0 auto!important;
+    padding:0!important;
+    transform:none!important;
+  }
+
+  #machine .machine-integrated-art{
+    position:static!important;
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    margin:0 auto!important;
+    padding:0!important;
+    transform:none!important;
+  }
+}
