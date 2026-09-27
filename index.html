@@ -339,10 +339,6 @@
         <button class="gallery-arrow prev" id="kbEquipmentPrev" type="button" aria-label="Previous image" style="z-index:9999;pointer-events:auto;">‹</button>
         <button class="gallery-arrow next" id="kbEquipmentNext" type="button" aria-label="Next image" style="z-index:9999;pointer-events:auto;">›</button>
       </div>
-      <div class="gallery-meta">
-        <p class="gallery-caption" id="kbEquipmentCaption">Cashless payment</p>
-        <div class="gallery-count" id="kbEquipmentCount" aria-live="polite">1 / 5</div>
-      </div>
     </div>
   </div>
 </section>
@@ -449,8 +445,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const mainImage = document.getElementById('kbEquipmentMain');
   const prevButton = document.getElementById('kbEquipmentPrev');
   const nextButton = document.getElementById('kbEquipmentNext');
-  const caption = document.getElementById('kbEquipmentCaption');
-  const counter = document.getElementById('kbEquipmentCount');
   const stage = document.getElementById('kbEquipmentStage');
   const thumbnails = Array.from(
     document.querySelectorAll('#kbEquipmentThumbs .gallery-thumb')
@@ -473,14 +467,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     mainImage.src = activeThumb.dataset.image;
     mainImage.alt = activeThumb.dataset.alt || '';
-
-    if (caption) {
-      caption.textContent = activeThumb.dataset.caption || '';
-    }
-
-    if (counter) {
-      counter.textContent = (currentIndex + 1) + ' / ' + thumbnails.length;
-    }
 
     thumbnails.forEach(function (thumb, thumbIndex) {
       const isActive = thumbIndex === currentIndex;
