@@ -523,6 +523,65 @@
     color:rgb(91,107,120) !important;
   }
 
+  /* Phones: text sizes tuned for small screens. */
+  @media (max-width:700px){
+    body main .eyebrow{
+      font-size:11px !important;
+      letter-spacing:1.6px !important;
+    }
+    body #solutions > p:not(.eyebrow),
+    body #placement .placement-heading > p:not(.eyebrow),
+    body .why-kaybee .why-heading > p:not(.eyebrow),
+    body .product-showcase .gallery-copy > p:not(.eyebrow),
+    body section.product-showcase div.gallery-copy > p:last-child,
+    body #contact > div > p:not(.eyebrow),
+    body .about-kaybee > p:not(.eyebrow){
+      font-size:16px !important;
+      line-height:1.6 !important;
+    }
+    body .why-kaybee .why-grid h3{
+      font-size:20px !important;
+    }
+    body .why-kaybee .why-grid p{
+      font-size:14px !important;
+    }
+    body #faq details p{
+      font-size:15px !important;
+    }
+    body #leadForm .form-note{
+      font-size:12px !important;
+      font-weight:500 !important;
+      line-height:1.5 !important;
+    }
+    body .site-footer .footer-nav a,
+    body .site-footer .footer-bottom a,
+    body .site-footer .footer-contact a{
+      display:inline-flex !important;
+      align-items:center !important;
+      min-height:40px !important;
+    }
+    body .site-footer,
+    body .site-footer .footer-brand,
+    body .site-footer .footer-contact,
+    body .site-footer .footer-bottom{
+      text-align:center !important;
+    }
+    body .site-footer .footer-brand,
+    body .site-footer .footer-contact,
+    body .site-footer .footer-bottom{
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+    }
+    body .site-footer .footer-contact > span{
+      display:none !important;
+    }
+    body .site-footer .footer-bottom{
+      gap:4px !important;
+    }
+  }
+
   /* Phones/tablets: center the contact links to match the centered text above them. */
   @media (max-width:900px){
     body #contact .contact-links{
