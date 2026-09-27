@@ -1,4 +1,5 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('.nav nav');
@@ -37,7 +38,7 @@ leadForm?.addEventListener('submit', async (e) => {
 
     if (response.ok) {
       form.reset();
-      formStatus.textContent = "Thank you. We’ll contact you within 24 hours.";
+      formStatus.textContent = "Thank you. We’ll typically contact you within one business day.";
       button.textContent = 'Request Sent';
     } else {
       formStatus.textContent = 'Something went wrong. Please try again.';
