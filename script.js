@@ -52,42 +52,9 @@ leadForm?.addEventListener('submit', async (e) => {
 });
 
 
-// Product gallery: show one photo at a time.
+// Product gallery carousel.
 const galleryMain = document.getElementById('galleryMain');
-const galleryThumbs = document.querySelectorAll('.gallery-thumb');
-
-galleryThumbs.forEach((thumb) => {
-  thumb.addEventListener('click', () => {
-    if (!galleryMain) return;
-    galleryThumbs.forEach((item) => item.classList.remove('active'));
-    thumb.classList.add('active');
-    galleryMain.src = thumb.dataset.image;
-    galleryMain.alt = thumb.dataset.alt || 'KayBeeVending smart vending machine';
-  });
-});
-
-
-// Move the zoom focus toward the pointer.
 const galleryStage = document.querySelector('.gallery-stage');
-
-galleryStage?.addEventListener('mousemove', (event) => {
-  if (!galleryMain) return;
-
-  const rect = galleryStage.getBoundingClientRect();
-  const x = ((event.clientX - rect.left) / rect.width) * 100;
-  const y = ((event.clientY - rect.top) / rect.height) * 100;
-
-  galleryMain.style.transformOrigin = `${x}% ${y}%`;
-});
-
-galleryStage?.addEventListener('mouseleave', () => {
-  if (galleryMain) {
-    galleryMain.style.transformOrigin = 'center center';
-  }
-});
-
-
-// Carousel controls
 const galleryPrev = document.querySelector('.gallery-arrow.prev');
 const galleryNext = document.querySelector('.gallery-arrow.next');
 const galleryCount = document.querySelector('.gallery-count');
@@ -103,7 +70,6 @@ function showGalleryImage(index) {
   if (!galleryMain || !galleryItems.length) return;
 
   galleryIndex = (index + galleryItems.length) % galleryItems.length;
-
   const item = galleryItems[galleryIndex];
 
   galleryItems.forEach((thumb) => {
@@ -115,9 +81,7 @@ function showGalleryImage(index) {
   item.setAttribute('aria-selected', 'true');
 
   galleryMain.src = item.dataset.image;
-  galleryMain.alt =
-    item.dataset.alt || 'KayBeeVending smart vending machine';
-
+  galleryMain.alt = item.dataset.alt || 'KayBeeVending smart vending machine';
   galleryMain.style.transformOrigin = 'center center';
 
   if (galleryCaption) {
@@ -125,8 +89,7 @@ function showGalleryImage(index) {
   }
 
   if (galleryCount) {
-    galleryCount.textContent =
-      `${galleryIndex + 1} / ${galleryItems.length}`;
+    galleryCount.textContent = `${galleryIndex + 1} / ${galleryItems.length}`;
   }
 
   item.scrollIntoView({
@@ -136,32 +99,39 @@ function showGalleryImage(index) {
   });
 }
 
-galleryItems.forEach((item, index) =>
-  item.addEventListener('click', () => {
-    galleryIndex = index;
-
-    if (galleryCaption) {
-      galleryCaption.textContent = item.dataset.caption || item.dataset.alt || '';
-    }
-
-    if (galleryCount) {
-      galleryCount.textContent =
-        `${galleryIndex + 1} / ${galleryItems.length}`;
-    }
-  })
-);
+galleryItems.forEach((item, index) => {
+  item.addEventListener('click', () => showGalleryImage(index));
+});
 
 galleryPrev?.addEventListener('click', (event) => {
+  event.preventDefault();
   event.stopPropagation();
   showGalleryImage(galleryIndex - 1);
 });
 
 galleryNext?.addEventListener('click', (event) => {
+  event.preventDefault();
   event.stopPropagation();
   showGalleryImage(galleryIndex + 1);
 });
 
-// Touch gestures make the gallery feel natural on phones.
+// Move the zoom focus toward the pointer.
+galleryStage?.addEventListener('mousemove', (event) => {
+  if (!galleryMain) return;
+
+  const rect = galleryStage.getBoundingClientRect();
+  const x = ((event.clientX - rect.left) / rect.width) * 100;
+  const y = ((event.clientY - rect.top) / rect.height) * 100;
+  galleryMain.style.transformOrigin = `${x}% ${y}%`;
+});
+
+galleryStage?.addEventListener('mouseleave', () => {
+  if (galleryMain) {
+    galleryMain.style.transformOrigin = 'center center';
+  }
+});
+
+// Touch gestures for phones.
 let galleryTouchStartX = 0;
 
 galleryStage?.addEventListener('touchstart', (event) => {
@@ -187,6 +157,9 @@ document.addEventListener('keydown', (event) => {
     showGalleryImage(galleryIndex + 1);
   }
 });
+
+// Sync initial caption, counter, and active state with the current 5-slide markup.
+showGalleryImage(galleryIndex);
 
 
 document.querySelectorAll('[data-contact]').forEach((el) => {
