@@ -280,6 +280,66 @@
     }
   }
 </style>
+<style id="equipment-carousel-sizing">
+  /* "The equipment we use" carousel: main image area up to 860 x 835, contained, never cropped.
+     Scales down proportionally on smaller screens. Thumbnails keep their size. */
+  #kbEquipmentCarousel #kbEquipmentStage{
+    position:relative !important;
+    width:100% !important;
+    max-width:860px !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:860 / 835 !important;
+    margin:0 auto !important;
+    align-self:start !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    overflow:hidden !important;
+  }
+  #kbEquipmentCarousel #kbEquipmentImageWrap{
+    position:relative !important;
+    width:100% !important;
+    height:100% !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+  #kbEquipmentCarousel #kbEquipmentMain{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:100% !important;
+    max-height:100% !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+  }
+  #kbEquipmentCarousel #kbEquipmentImageWrap .gallery-arrow{
+    top:50% !important;
+    transform:translateY(-50%) !important;
+  }
+
+  /* Desktop: widen this section so the image column can reach 860px. */
+  @media (min-width:1181px){
+    body section.product-showcase{
+      max-width:1560px !important;
+      grid-template-columns:minmax(300px,380px) minmax(0,1fr) !important;
+    }
+    body section.product-showcase #kbEquipmentCarousel{
+      grid-template-columns:114px minmax(0,860px) !important;
+      justify-content:end !important;
+      align-items:start !important;
+      max-width:none !important;
+      width:100% !important;
+    }
+    body section.product-showcase #kbEquipmentThumbs .gallery-thumb{
+      width:110px !important;
+      height:96px !important;
+      flex:0 0 auto !important;
+    }
+  }
+</style>
 <style id="phone-gallery-thumbs-fit">
   /* Phones: show all 5 carousel thumbnails in one row, no sideways scrolling. */
   @media (max-width:900px){
