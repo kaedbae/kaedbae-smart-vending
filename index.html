@@ -21,6 +21,17 @@
 <link rel="stylesheet" href="hero-reference.css?v=20260926-04">
 <style id="hero-image-only-fix">
   /* Reference-matched top fold: header + hero fill one desktop viewport. */
+  .sr-only{
+    position:absolute !important;
+    width:1px !important;
+    height:1px !important;
+    padding:0 !important;
+    margin:-1px !important;
+    overflow:hidden !important;
+    clip:rect(0,0,0,0) !important;
+    white-space:nowrap !important;
+    border:0 !important;
+  }
   .contact-bar{
     display:none !important;
   }
@@ -259,9 +270,10 @@
 </header>
 <main>
 <section class="hero-image-only" aria-label="KayBeeVending smart vending service">
+  <h1 class="sr-only">Vending Service for Your Business</h1>
   <picture>
     <source media="(max-width: 700px)" srcset="assets/kaybee-vending-hero-phone.png?v=20260926-fit2">
-    <img src="assets/kaybee-vending-hero-desktop.png" alt="Smart vending service for Metro Detroit businesses">
+    <img src="assets/kaybee-vending-hero-desktop.png" alt="Vending Service for Your Business — Smart Vending for Metro Detroit. We place, stock, and maintain machines at your business, at no cost to qualifying locations.">
   </picture>
 
   <div class="hero-image-buttons">
