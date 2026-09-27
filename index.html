@@ -325,23 +325,23 @@
     <h2 id="gallery-title">Modern vending, professionally installed and managed.</h2>
     <p>Take a closer look at the smart vending equipment we install at qualifying locations, including cashless checkout, refrigerated storage, and placement examples.</p>
   </div>
-  <div class="product-gallery">
-    <div class="gallery-thumbs" role="tablist" aria-label="Vending Plus 440-AI photos">
+  <div class="product-gallery" id="kbEquipmentCarousel">
+    <div class="gallery-thumbs" id="kbEquipmentThumbs" role="tablist" aria-label="Vending Plus 440-AI photos">
       <button class="gallery-thumb active" type="button" data-image="assets/cashless.png" data-alt="Cashless card and mobile payment interface on the Vending Plus 440-AI" data-caption="Cashless payment"><img src="assets/cashless.png" alt="Cashless card and mobile payment interface on the Vending Plus 440-AI"></button>
       <button class="gallery-thumb" type="button" data-image="assets/platform.png" data-alt="Remote inventory and vending management platform dashboard" data-caption="Remote management platform"><img src="assets/platform.png" alt="Remote inventory and vending management platform dashboard"></button>
       <button class="gallery-thumb" type="button" data-image="assets/user-friendly.png" data-alt="Customer-facing hardware and access features of the Vending Plus 440-AI" data-caption="Customer-friendly hardware"><img src="assets/user-friendly.png" alt="Customer-facing hardware and access features of the Vending Plus 440-AI"></button>
       <button class="gallery-thumb" type="button" data-image="assets/refrigerated.png" data-alt="Refrigerated Vending Plus 440-AI cooler with stocked shelves" data-caption="Refrigerated storage"><img src="assets/refrigerated.png" alt="Refrigerated Vending Plus 440-AI cooler with stocked shelves"></button>
       <button class="gallery-thumb" type="button" data-image="assets/gym-placement.png" data-alt="Vending Plus 440-AI smart cooler installed in a gym environment" data-caption="Example gym placement"><img src="assets/gym-placement.png" alt="Vending Plus 440-AI smart cooler installed in a gym environment"></button>
     </div>
-    <div class="gallery-stage">
-      <div class="gallery-image-wrap">
-        <img id="galleryMain" src="assets/cashless.png" alt="Cashless card and mobile payment interface on the Vending Plus 440-AI">
-        <button class="gallery-arrow prev" type="button" aria-label="Previous image">‹</button>
-        <button class="gallery-arrow next" type="button" aria-label="Next image">›</button>
+    <div class="gallery-stage" id="kbEquipmentStage">
+      <div class="gallery-image-wrap" id="kbEquipmentImageWrap">
+        <img id="kbEquipmentMain" src="assets/cashless.png" alt="Cashless card and mobile payment interface on the Vending Plus 440-AI">
+        <button class="gallery-arrow prev" id="kbEquipmentPrev" type="button" aria-label="Previous image" style="z-index:9999;pointer-events:auto;">‹</button>
+        <button class="gallery-arrow next" id="kbEquipmentNext" type="button" aria-label="Next image" style="z-index:9999;pointer-events:auto;">›</button>
       </div>
       <div class="gallery-meta">
-        <p class="gallery-caption" id="galleryCaption">Cashless payment</p>
-        <div class="gallery-count" aria-live="polite">1 / 5</div>
+        <p class="gallery-caption" id="kbEquipmentCaption">Cashless payment</p>
+        <div class="gallery-count" id="kbEquipmentCount" aria-live="polite">1 / 5</div>
       </div>
     </div>
   </div>
@@ -439,6 +439,102 @@
     <a href="#top">Back to top ↑</a>
   </div>
 </footer>
-<script src="script.js?v=20260927-carousel1"></script>
+<script src="script.js?v=20260927-carousel2"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.getElementById('kbEquipmentCarousel');
+  if (!carousel) return;
+
+  const mainImage = document.getElementById('kbEquipmentMain');
+  const prevButton = document.getElementById('kbEquipmentPrev');
+  const nextButton = document.getElementById('kbEquipmentNext');
+  const caption = document.getElementById('kbEquipmentCaption');
+  const counter = document.getElementById('kbEquipmentCount');
+  const stage = document.getElementById('kbEquipmentStage');
+  const thumbnails = Array.from(
+    document.querySelectorAll('#kbEquipmentThumbs .gallery-thumb')
+  );
+
+  if (!mainImage || !prevButton || !nextButton || !stage || thumbnails.length !== 5) {
+    return;
+  }
+
+  let currentIndex = Math.max(
+    0,
+    thumbnails.findIndex(function (thumb) {
+      return thumb.classList.contains('active');
+    })
+  );
+
+  function render(index) {
+    currentIndex = (index + thumbnails.length) % thumbnails.length;
+    const activeThumb = thumbnails[currentIndex];
+
+    mainImage.src = activeThumb.dataset.image;
+    mainImage.alt = activeThumb.dataset.alt || '';
+
+    if (caption) {
+      caption.textContent = activeThumb.dataset.caption || '';
+    }
+
+    if (counter) {
+      counter.textContent = (currentIndex + 1) + ' / ' + thumbnails.length;
+    }
+
+    thumbnails.forEach(function (thumb, thumbIndex) {
+      const isActive = thumbIndex === currentIndex;
+      thumb.classList.toggle('active', isActive);
+      thumb.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+  }
+
+  prevButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    render(currentIndex - 1);
+  });
+
+  nextButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    render(currentIndex + 1);
+  });
+
+  thumbnails.forEach(function (thumb, index) {
+    thumb.addEventListener('click', function () {
+      render(index);
+    });
+  });
+
+  let touchStartX = null;
+
+  stage.addEventListener('touchstart', function (event) {
+    const touch = event.changedTouches[0];
+    touchStartX = touch ? touch.clientX : null;
+  }, { passive: true });
+
+  stage.addEventListener('touchend', function (event) {
+    if (touchStartX === null) return;
+
+    const touch = event.changedTouches[0];
+    if (!touch) return;
+
+    const deltaX = touch.clientX - touchStartX;
+    touchStartX = null;
+
+    if (Math.abs(deltaX) < 45) return;
+
+    if (deltaX < 0) {
+      render(currentIndex + 1);
+    } else {
+      render(currentIndex - 1);
+    }
+  }, { passive: true });
+
+  render(currentIndex);
+});
+</script>
+
 </body>
 </html>
