@@ -280,6 +280,48 @@
     }
   }
 </style>
+<style id="phone-gallery-thumbs-fit">
+  /* Phones: show all 5 carousel thumbnails in one row, no sideways scrolling. */
+  @media (max-width:900px){
+    #kbEquipmentCarousel #kbEquipmentThumbs{
+      display:grid !important;
+      grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+      grid-template-rows:auto !important;
+      grid-auto-rows:auto !important;
+      height:auto !important;
+      max-height:none !important;
+      min-height:0 !important;
+      gap:8px !important;
+      overflow:visible !important;
+      padding:4px 0 8px !important;
+      width:100% !important;
+    }
+    #kbEquipmentCarousel #kbEquipmentThumbs .gallery-thumb{
+      flex:none !important;
+      width:100% !important;
+      min-width:0 !important;
+      height:auto !important;
+      aspect-ratio:1/1 !important;
+    }
+    #kbEquipmentCarousel #kbEquipmentThumbs .gallery-thumb img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+    }
+  }
+  /* Tablets: match the phone/desktop colors (teal band hid the eyebrow label). */
+  @media (min-width:701px) and (max-width:1099px){
+    .product-showcase{
+      background:rgb(221,234,242) !important;
+    }
+    .product-showcase .gallery-copy h2{
+      color:rgb(31,52,70) !important;
+    }
+    .product-showcase .gallery-copy p:not(.eyebrow){
+      color:rgb(91,107,120) !important;
+    }
+  }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -420,11 +462,11 @@
     <span class="payment-brand discover">DISCOVER</span>
       </div>
   <div class="payment-methods payment-methods-polished" hidden aria-label="Accepted payment methods at the vending machine">
-    <img src="https://cdn.jsdelivr.net/gh/activemerchant/payment_icons@7e9b488c7ca15af70580c640f87c18f848516140/app/assets/images/payment_icons/visa.svg" alt="Visa" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
-    <img src="https://cdn.jsdelivr.net/gh/activemerchant/payment_icons@7e9b488c7ca15af70580c640f87c18f848516140/app/assets/images/payment_icons/master.svg" alt="Mastercard" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
-    <img src="https://cdn.jsdelivr.net/gh/activemerchant/payment_icons@master/app/assets/images/payment_icons/discover.svg" alt="Discover" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
-    <img src="https://cdn.jsdelivr.net/gh/activemerchant/payment_icons@master/app/assets/images/payment_icons/apple_pay.svg" alt="Apple Pay" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
-    <img src="https://cdn.jsdelivr.net/gh/activemerchant/payment_icons@master/app/assets/images/payment_icons/google_pay.svg" alt="Google Pay" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
+    <img src="assets/payment/visa.svg" alt="Visa" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
+    <img src="assets/payment/master.svg" alt="Mastercard" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
+    <img src="assets/payment/discover.svg" alt="Discover" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
+    <img src="assets/payment/apple_pay.svg" alt="Apple Pay" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
+    <img src="assets/payment/google_pay.svg" alt="Google Pay" width="64" height="40" loading="lazy" onerror="this.style.display='none'">
   </div>
 </section>
 <section class="product-showcase" aria-labelledby="gallery-title">
