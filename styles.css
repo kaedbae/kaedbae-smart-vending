@@ -2811,34 +2811,6 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   margin:0 auto!important;
 }
 .combined-why .why-grid{margin-bottom:28px!important}
-.combined-spaces{
-  border-top:1px solid var(--line)!important;
-  padding-top:22px!important;
-  text-align:center!important;
-}
-.combined-spaces>span{
-  display:block!important;
-  margin-bottom:14px!important;
-  color:var(--blue)!important;
-  font-size:12px!important;
-  font-weight:850!important;
-  letter-spacing:1.6px!important;
-}
-.combined-spaces .chips{
-  justify-content:center!important;
-  gap:9px!important;
-}
-.combined-spaces .chips span{
-  display:inline-flex!important;
-  align-items:center!important;
-  gap:8px!important;
-}
-.combined-spaces .location-icon{
-  width:18px!important;
-  height:18px!important;
-  flex:0 0 18px!important;
-  color:var(--blue)!important;
-}
 @media(max-width:560px){
   .combined-why{
     padding-top:42px!important;
@@ -2846,7 +2818,6 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   }
   .combined-why .why-heading{margin-bottom:22px!important}
   .combined-why .why-heading>h2{margin-bottom:22px!important}
-  .combined-spaces{padding-top:18px!important}
 }
 
 
