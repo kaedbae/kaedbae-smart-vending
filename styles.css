@@ -2828,6 +2828,17 @@ footer{padding-top:24px!important;padding-bottom:32px!important}
   justify-content:center!important;
   gap:9px!important;
 }
+.combined-spaces .chips span{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:8px!important;
+}
+.combined-spaces .location-icon{
+  width:18px!important;
+  height:18px!important;
+  flex:0 0 18px!important;
+  color:var(--blue)!important;
+}
 @media(max-width:560px){
   .combined-why{
     padding-top:42px!important;
